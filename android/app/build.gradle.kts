@@ -1,39 +1,74 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
+    // `flutterfire configure` adds com.google.gms.google-services and
+    // com.google.firebase.crashlytics here (they need the per-flavor google-services.json).
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+val keystore = Properties().apply {
+    rootProject.file("key.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+}
+
 android {
-    namespace = "com.example.quran_pro"
-    compileSdk = flutter.compileSdkVersion
+    namespace = "com.islamicnoorapp.app"
+    compileSdk = 37 // flutter_local_notifications 23 requires 37; flutter default is 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true // required by flutter_local_notifications
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.quran_pro"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        applicationId = "com.islamicnoorapp.app"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
-        // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)
-        // You can force using the value of versionCode by specifying the `-P force-version-code-ignoring-abi=true`
-        // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        create("release") {
+            keyAlias = keystore["keyAlias"] as String?
+            keyPassword = keystore["keyPassword"] as String?
+            storeFile = (keystore["storeFile"] as String?)?.let { file(it) }
+            storePassword = keystore["storePassword"] as String?
+        }
+    }
+
+    buildFeatures {
+        resValues = true // per-flavor app_name (off by default since AGP 9)
+    }
+
+    flavorDimensions += "env"
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+            resValue("string", "app_name", "Quran Pro Dev")
+        }
+        create("staging") {
+            dimension = "env"
+            applicationIdSuffix = ".stg"
+            resValue("string", "app_name", "Quran Pro Stg")
+        }
+        create("prod") {
+            dimension = "env"
+            resValue("string", "app_name", "Quran Pro")
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            // Without android/key.properties (local machines), fall back to debug signing.
+            signingConfig = signingConfigs.getByName(if (keystore.isEmpty) "debug" else "release")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }
@@ -42,6 +77,10 @@ kotlin {
     compilerOptions {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
+}
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }
 
 flutter {

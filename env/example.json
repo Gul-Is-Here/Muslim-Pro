@@ -1,0 +1,5 @@
+{
+  "GOOGLE_SERVER_CLIENT_ID": "<web OAuth client id>.apps.googleusercontent.com",
+  "APP_CHECK_DEBUG_TOKEN": "",
+  "USE_EMULATORS": "false"
+}

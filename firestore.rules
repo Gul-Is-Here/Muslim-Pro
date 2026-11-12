@@ -1,0 +1,107 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Anything not matched below is denied.
+
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+    function incoming() { return request.resource.data; }
+    function isStr(v, min, max) { return v is string && v.size() >= min && v.size() <= max; }
+    function inRange(v, lo, hi) { return v is int && v >= lo && v <= hi; }
+    function exactKeys(keys) { return incoming().keys().hasAll(keys) && incoming().keys().hasOnly(keys); }
+    function onlyChanged(keys) { return incoming().diff(resource.data).affectedKeys().hasOnly(keys); }
+    function isNow(v) { return v == request.time; }
+
+    // ---------- Public content: read-only for clients ----------
+    // Admin SDK / Console bypass rules; isAdmin() serves an in-house admin panel.
+    match /lessons/{id}        { allow read: if signedIn(); allow write: if isAdmin(); }
+    match /quizzes/{id}        { allow read: if signedIn(); allow write: if isAdmin(); }
+    match /duas/{id}           { allow read: if signedIn(); allow write: if isAdmin(); }
+    match /names_of_allah/{id} { allow read: if signedIn(); allow write: if isAdmin(); }
+
+    // ---------- Per-user data: owner only ----------
+    match /users/{uid} {
+      function validSettings(s) {
+        return s is map
+          && s.keys().hasOnly(['calcMethod', 'hanafiAsr', 'prayerAlerts'])
+          && (!('calcMethod' in s) || isStr(s.calcMethod, 1, 40))
+          && (!('hanafiAsr' in s) || s.hanafiAsr is bool)
+          && (!('prayerAlerts' in s) || s.prayerAlerts is bool);
+      }
+      function validProfile() {
+        return (!('displayName' in incoming()) || isStr(incoming().displayName, 0, 50))
+          && (!('locale' in incoming()) || incoming().locale in ['en', 'ur', 'ar'])
+          && (!('settings' in incoming()) || validSettings(incoming().settings));
+      }
+
+      allow read, delete: if isOwner(uid);
+      allow create: if isOwner(uid)
+        && incoming().keys().hasOnly(['displayName', 'locale', 'settings', 'createdAt', 'updatedAt'])
+        && isNow(incoming().createdAt) && isNow(incoming().updatedAt)
+        && validProfile();
+      allow update: if isOwner(uid)
+        && onlyChanged(['displayName', 'locale', 'settings', 'updatedAt'])
+        && isNow(incoming().updatedAt)
+        && validProfile();
+
+      // XP / streak / badges feed leaderboards: written by Cloud Functions only.
+      match /stats/{doc} {
+        allow read: if isOwner(uid);
+        allow write: if false;
+      }
+
+      match /prayer_logs/{date} {
+        function validStatus(s) { return s in ['none', 'onTime', 'late', 'missed', 'qada']; }
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+          && exactKeys(['fajr', 'dhuhr', 'asr', 'maghrib', 'isha', 'updatedAt'])
+          && validStatus(incoming().fajr) && validStatus(incoming().dhuhr)
+          && validStatus(incoming().asr) && validStatus(incoming().maghrib)
+          && validStatus(incoming().isha)
+          && isNow(incoming().updatedAt);
+      }
+
+      match /progress/{lessonId} {
+        function validProgress() {
+          return exactKeys(['completed', 'score', 'completedAt'])
+            && incoming().completed is bool
+            && inRange(incoming().score, 0, 100)
+            && isNow(incoming().completedAt);
+        }
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid) && validProgress()
+          && exists(/databases/$(database)/documents/lessons/$(lessonId));
+        // A completed lesson can't be "un-completed" (would let XP be farmed by toggling).
+        allow update: if isOwner(uid) && validProgress()
+          && !(resource.data.completed == true && incoming().completed == false);
+        allow delete: if false;
+      }
+
+      match /bookmarks/{id} {
+        allow read, delete: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && incoming().keys().hasAll(['surah', 'ayah', 'createdAt'])
+          && incoming().keys().hasOnly(['surah', 'ayah', 'note', 'createdAt'])
+          && inRange(incoming().surah, 1, 114) && inRange(incoming().ayah, 1, 286)
+          && (!('note' in incoming()) || isStr(incoming().note, 0, 500))
+          && isNow(incoming().createdAt);
+        allow update: if isOwner(uid) && onlyChanged(['note']) && isStr(incoming().note, 0, 500);
+      }
+
+      match /tasbeeh/{id} {
+        allow read, delete: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && exactKeys(['dhikrKey', 'count', 'target', 'createdAt', 'updatedAt'])
+          && isStr(incoming().dhikrKey, 1, 64)
+          && inRange(incoming().count, 0, 100000) && inRange(incoming().target, 1, 100000)
+          && isNow(incoming().createdAt) && isNow(incoming().updatedAt);
+        allow update: if isOwner(uid)
+          && onlyChanged(['count', 'updatedAt'])
+          && inRange(incoming().count, 0, 100000)
+          && isNow(incoming().updatedAt);
+      }
+    }
+  }
+}

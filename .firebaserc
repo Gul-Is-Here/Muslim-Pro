@@ -1,0 +1,1 @@
+{ "projects": { "dev": "quran-pro-dev", "staging": "quran-pro-staging", "prod": "quran-pro-prod" } }
