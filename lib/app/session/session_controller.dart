@@ -19,8 +19,15 @@ final class SessionController extends GetxService {
   @override
   void onInit() {
     super.onInit();
-    _uid = _auth.user?.uid;
-    _sub = _auth.userChanges.listen((u) => unawaited(_onUserChanged(u)));
+    // Start after Firebase restores the persisted session: that first emission is not a
+    // sign-in, and navigating on it would run before GetMaterialApp exists.
+    unawaited(
+      _auth.ready.then((_) {
+        if (isClosed) return;
+        _uid = _auth.user?.uid;
+        _sub = _auth.userChanges.listen((u) => unawaited(_onUserChanged(u)));
+      }),
+    );
   }
 
   Future<void> _onUserChanged(AppUser? user) async {

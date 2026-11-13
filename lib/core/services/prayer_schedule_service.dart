@@ -1,15 +1,20 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:quran_pro/core/errors/result.dart';
 import 'package:quran_pro/core/services/notification_service.dart';
 import 'package:quran_pro/core/services/settings_service.dart';
 import 'package:quran_pro/core/utils/app_log.dart';
 import 'package:quran_pro/data/models/prayer.dart';
+import 'package:quran_pro/data/models/prayer_alert_settings.dart';
+import 'package:quran_pro/data/models/prayer_settings.dart';
+import 'package:quran_pro/data/models/user_location.dart';
 import 'package:quran_pro/domain/repositories/prayer_times_repository.dart';
 
 /// Schedules azan alerts locally from adhan calculations, never from the server.
-/// It reschedules on app start and whenever the location, method, madhab or alerts toggle changes.
+/// App-wide (not tied to any screen): it reschedules on app start and whenever the location,
+/// method, madhab, master switch, or a prayer's toggle/sound changes.
 final class PrayerScheduleService extends GetxService {
   PrayerScheduleService(this._prayers, this._notifications, this._settings);
 
@@ -41,7 +46,18 @@ final class PrayerScheduleService extends GetxService {
     try {
       do {
         _again = false;
-        await _notifications.replacePrayerAlerts(_buildAlerts());
+        await _notifications.replacePrayerAlerts(
+          _settings.prayerAlertsOn
+              ? buildAlerts(
+                  prayers: _prayers,
+                  location: _settings.lastLocation,
+                  method: _settings.prayerSettings,
+                  prefs: _settings.prayerAlertSettings,
+                  now: DateTime.now(),
+                  days: _days,
+                )
+              : const [],
+        );
       } while (_again);
     } on Object catch (e, s) {
       AppLog.e(e, s);
@@ -50,30 +66,36 @@ final class PrayerScheduleService extends GetxService {
     }
   }
 
-  List<PrayerAlert> _buildAlerts() {
-    final loc = _settings.lastLocation;
-    if (loc == null || !_settings.prayerAlertsOn) return const [];
-    final now = DateTime.now();
+  /// Alerts for every enabled prayer still ahead in the next [days] days, each with its sound.
+  @visibleForTesting
+  static List<PrayerAlert> buildAlerts({
+    required PrayerTimesRepository prayers,
+    required UserLocation? location,
+    required PrayerSettings method,
+    required PrayerAlertSettings prefs,
+    required DateTime now,
+    required int days,
+  }) {
+    if (location == null) return const [];
     return [
-      for (var d = 0; d < _days; d++)
-        if (_prayers.timesFor(
-              DateTime(now.year, now.month, now.day + d),
-              loc,
-              _settings.prayerSettings,
-            )
-            case Ok(:final value))
+      for (var d = 0; d < days; d++)
+        if (prayers.timesFor(DateTime(now.year, now.month, now.day + d), location, method) case Ok(
+          :final value,
+        ))
           for (final p in Prayer.obligatory)
-            if (value.times[p]!.isAfter(now))
+            if (prefs.isOn(p) && value.times[p]!.isAfter(now))
               (
                 id: _id(value.date, p),
                 title: p.labelKey.tr,
                 body: 'prayer_alert_body'.trParams({'prayer': p.labelKey.tr}),
                 at: value.times[p]!,
+                sound: prefs.soundFor(p),
               ),
     ];
   }
 
-  /// Stable per (day, prayer). UTC dates so DST shifts never collide two days.
+  /// Stable per (day, prayer), so rescheduling replaces rather than duplicates.
+  /// UTC dates so DST shifts never collide two days.
   static int _id(DateTime day, Prayer p) =>
       DateTime.utc(day.year, day.month, day.day).difference(DateTime.utc(2024)).inDays * 10 +
       p.index;

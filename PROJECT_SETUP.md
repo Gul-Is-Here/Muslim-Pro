@@ -372,10 +372,10 @@ flutter { source = "../.." }
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools"
-    tools:keep="@raw/azan,@drawable/ic_notification" />
+    tools:keep="@drawable/ic_notification,@raw/azan_tatarstan,@raw/azan_hamtramck" />
 ```
 
-Put `azan.mp3` in `res/raw/`. `ic_notification` is a white, monochrome vector in `res/drawable/`.
+Azan clips live in `res/raw/azan_<name>.mp3` (one notification channel per sound; sources and licenses in `docs/AUDIO_CREDITS.md`). `ic_notification` is a white, monochrome vector in `res/drawable/`.
 
 `AndroidManifest.xml` (main):
 
@@ -417,7 +417,7 @@ Steps 1 to 4 are **already done** in the repo; a script built them with the `xco
 
 The `Podfile` maps every flavored configuration to `:debug` or `:release` and sets `platform :ios, '15.0'`.
 5. Capabilities: Push Notifications, Background Modes → Remote notifications, Sign in with Apple, and App Attest.
-6. Add an `azan.caf` (30 seconds or less) to the Runner target. iOS falls back to the default sound for longer files.
+6. Azan clips are `ios/Runner/azan_<name>.caf` (IMA4, under 30 seconds) in the Runner target's resources. iOS plays the default sound for longer files.
 
 `Info.plist`:
 

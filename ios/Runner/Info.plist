@@ -37,6 +37,8 @@
 	<string>$(GOOGLE_IOS_CLIENT_ID)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera shows a live view with the Qibla direction marked on it. Nothing is recorded or saved.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your approximate location is used on this device to calculate prayer times and the Qibla direction.</string>
 	<key>UIApplicationSceneManifest</key>

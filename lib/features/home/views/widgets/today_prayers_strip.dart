@@ -135,16 +135,20 @@ final class _PrayerChip extends GetView<PrayerTimesViewModel> {
               ),
             ),
           ),
-          Text(
-            controller.timeOf(prayer),
-            style: AppTextStyles.timer.copyWith(
-              fontSize: 10,
-              fontWeight: isNext ? FontWeight.w700 : FontWeight.w500,
-              color: switch (state) {
-                _ChipState.passed => AppColors.gray500,
-                _ChipState.next => Colors.white,
-                _ChipState.upcoming => AppColors.gray400,
-              },
+          FittedBox(
+            fit: BoxFit.scaleDown, // "12:05 PM" must stay on one line in a narrow chip
+            child: Text(
+              controller.timeOf(prayer),
+              maxLines: 1,
+              style: AppTextStyles.timer.copyWith(
+                fontSize: 10,
+                fontWeight: isNext ? FontWeight.w700 : FontWeight.w500,
+                color: switch (state) {
+                  _ChipState.passed => AppColors.gray500,
+                  _ChipState.next => Colors.white,
+                  _ChipState.upcoming => AppColors.gray400,
+                },
+              ),
             ),
           ),
         ],

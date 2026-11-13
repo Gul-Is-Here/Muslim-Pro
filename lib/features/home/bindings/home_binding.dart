@@ -5,7 +5,10 @@ import 'package:quran_pro/features/prayer_times/bindings/prayer_times_binding.da
 final class HomeBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => HomeViewModel(Get.find(), Get.find(), Get.find(), Get.find()), fenix: true);
+    Get.lazyPut(
+      () => HomeViewModel(Get.find(), Get.find(), Get.find(), Get.find(), Get.find()),
+      fenix: true,
+    );
     PrayerTimesBinding()
         .dependencies(); // the hero card and prayer strip share the feature ViewModel
   }

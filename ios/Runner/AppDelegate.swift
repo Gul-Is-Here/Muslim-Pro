@@ -1,4 +1,5 @@
 import Flutter
+import GoogleMaps
 import UIKit
 
 @main
@@ -12,5 +13,14 @@ import UIKit
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
+    // The Maps key comes from Dart (env/<flavor>.json via --dart-define), so it is never in git.
+    // Dart sends it once, before the first map is shown.
+    FlutterMethodChannel(name: "app/maps", binaryMessenger: engineBridge.applicationRegistrar.messenger())
+      .setMethodCallHandler { call, result in
+        guard call.method == "setApiKey", let key = call.arguments as? String, !key.isEmpty else {
+          return result(FlutterMethodNotImplemented)
+        }
+        result(GMSServices.provideAPIKey(key))
+      }
   }
 }

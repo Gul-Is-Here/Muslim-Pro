@@ -4,4 +4,7 @@ abstract final class Env {
   static const googleServerClientId = String.fromEnvironment('GOOGLE_SERVER_CLIENT_ID');
   static const appCheckDebugToken = String.fromEnvironment('APP_CHECK_DEBUG_TOKEN');
   static const useEmulators = bool.fromEnvironment('USE_EMULATORS');
+
+  /// Client key, restricted in Google Cloud to this app's package/SHA-1 and bundle id.
+  static const googleMapsApiKey = String.fromEnvironment('GOOGLE_MAPS_API_KEY');
 }

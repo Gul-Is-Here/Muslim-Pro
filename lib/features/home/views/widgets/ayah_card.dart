@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quran_pro/core/services/audio_service.dart';
 import 'package:quran_pro/core/theme/app_colors.dart';
 import 'package:quran_pro/features/home/viewmodels/home_view_model.dart';
 
@@ -67,7 +68,12 @@ final class AyahCard extends GetView<HomeViewModel> {
                         ),
                       ),
                     ),
-                    _ReciteButton(onTap: controller.comingSoon),
+                    Obx(
+                      () => _ReciteButton(
+                        status: controller.reciteStatus,
+                        onTap: controller.toggleRecite,
+                      ),
+                    ),
                     Obx(
                       () => _RoundIcon(
                         icon: controller.ayahBookmarked ? Icons.bookmark : Icons.bookmark_border,
@@ -149,8 +155,9 @@ final class AyahCard extends GetView<HomeViewModel> {
 }
 
 final class _ReciteButton extends StatelessWidget {
-  const _ReciteButton({required this.onTap});
+  const _ReciteButton({required this.status, required this.onTap});
 
+  final AudioStatus status;
   final VoidCallback onTap;
 
   @override
@@ -166,9 +173,32 @@ final class _ReciteButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           spacing: 4,
           children: [
-            const Icon(Icons.play_arrow, size: 16, color: AppColors.emerald700),
+            if (status == AudioStatus.loading)
+              const SizedBox.square(
+                dimension: 16,
+                child: Padding(
+                  padding: EdgeInsets.all(2),
+                  child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.emerald700),
+                ),
+              )
+            else
+              Icon(
+                switch (status) {
+                  AudioStatus.playing => Icons.pause,
+                  AudioStatus.error => Icons.refresh,
+                  _ => Icons.play_arrow,
+                },
+                size: 16,
+                color: AppColors.emerald700,
+              ),
             Text(
-              'recite'.tr,
+              switch (status) {
+                AudioStatus.idle => 'recite',
+                AudioStatus.loading => 'audio_loading',
+                AudioStatus.playing => 'pause',
+                AudioStatus.paused => 'resume',
+                AudioStatus.error => 'retry',
+              }.tr,
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,

@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:quran_pro/core/utils/app_log.dart';
@@ -35,22 +38,47 @@ final class LocationService extends GetxService {
         ),
       );
       return UserLocation.rounded(p.latitude, p.longitude);
+    } on TimeoutException {
+      // No fresh fix in time (indoors, right after the permission prompt, or a Simulator
+      // with no location set): an older OS-cached fix is fine for prayer times.
+      AppLog.w('Location fix timed out; using last known position');
+      final last = await Geolocator.getLastKnownPosition();
+      return last == null ? null : UserLocation.rounded(last.latitude, last.longitude);
     } on Exception catch (e, s) {
       AppLog.e(e, s);
       return null;
     }
   }
 
-  /// Coarse place label from the device time zone ("Asia/Karachi" → "Karachi"); no geocoding call.
-  Future<String> approximatePlaceName() async {
+  /// City and country for [at] from the phone's own geocoder (Android Geocoder / iOS CLGeocoder:
+  /// no API key, but it needs a network connection). Nulls when unavailable.
+  Future<({String? name, String? countryCode})> lookupPlace(UserLocation at) async {
     try {
-      return (await FlutterTimezone.getLocalTimezone()).identifier
-          .split('/')
-          .last
-          .replaceAll('_', ' ');
+      final marks = await Geocoding()
+          .placemarkFromCoordinates(at.lat, at.lng)
+          .timeout(const Duration(seconds: 8));
+      if (marks.isEmpty) return (name: null, countryCode: null);
+      final m = marks.first;
+      String? nonEmpty(String? s) => s == null || s.trim().isEmpty ? null : s.trim();
+      return (
+        name:
+            nonEmpty(m.locality) ??
+            nonEmpty(m.subAdministrativeArea) ??
+            nonEmpty(m.administrativeArea),
+        countryCode: nonEmpty(m.isoCountryCode),
+      );
+    } on Exception catch (e) {
+      AppLog.w('Place lookup failed: ${e.runtimeType}'); // offline is normal: keep the cached place
+      return (name: null, countryCode: null);
+    }
+  }
+
+  Future<String?> timeZoneId() async {
+    try {
+      return (await FlutterTimezone.getLocalTimezone()).identifier;
     } on Exception catch (e, s) {
       AppLog.e(e, s);
-      return '';
+      return null;
     }
   }
 

@@ -12,7 +12,16 @@ final class PrayerTimesView extends GetView<PrayerTimesViewModel> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text('prayer_times'.tr)),
+    appBar: AppBar(
+      title: Text('prayer_times'.tr),
+      actions: [
+        IconButton(
+          tooltip: 'prayer_notifications'.tr,
+          onPressed: controller.openNotificationSettings,
+          icon: const Icon(Icons.notifications_outlined),
+        ),
+      ],
+    ),
     body: Obx(
       () => switch (controller.state) {
         Idle() || Loading() => const Center(child: CircularProgressIndicator()),
@@ -27,6 +36,14 @@ final class PrayerTimesView extends GetView<PrayerTimesViewModel> {
             padding: const EdgeInsetsDirectional.all(16),
             children: [
               const NextPrayerCard(),
+              Obx(
+                () => ListTile(
+                  dense: true,
+                  leading: const Icon(Icons.calculate_outlined),
+                  title: Text('calculated_for'.tr),
+                  subtitle: Text(controller.calculationLabel),
+                ),
+              ),
               for (final p in Prayer.values) _PrayerRow(prayer: p, at: data.times[p]!),
             ],
           ),

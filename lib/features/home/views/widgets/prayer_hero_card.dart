@@ -227,7 +227,7 @@ final class _AdhanToggle extends GetView<HomeViewModel> {
       shape: StadiumBorder(side: BorderSide(color: Colors.white.withValues(alpha: 0.15))),
       child: InkWell(
         customBorder: const StadiumBorder(),
-        onTap: controller.toggleAlerts,
+        onTap: controller.openNotificationSettings,
         child: Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 4),
           child: Row(

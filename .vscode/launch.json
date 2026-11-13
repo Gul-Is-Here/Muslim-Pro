@@ -5,15 +5,13 @@
       "name": "dev",
       "request": "launch",
       "type": "dart",
-      "program": "lib/main_dev.dart",
+      "program": "lib/main.dart",
       "args": [
         "--flavor",
         "dev",
         "--dart-define-from-file=env/dev.json"
       ],
-      "templateFor": [
-        "lib/main_dev.dart"
-      ]
+      "templateFor": "lib"
     },
     {
       "name": "staging",
@@ -24,9 +22,6 @@
         "--flavor",
         "staging",
         "--dart-define-from-file=env/staging.json"
-      ],
-      "templateFor": [
-        "lib/main_staging.dart"
       ]
     },
     {
@@ -38,9 +33,6 @@
         "--flavor",
         "prod",
         "--dart-define-from-file=env/prod.json"
-      ],
-      "templateFor": [
-        "lib/main_prod.dart"
       ]
     }
   ]

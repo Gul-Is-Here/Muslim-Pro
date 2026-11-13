@@ -4,34 +4,44 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:quran_pro/app/routes/app_routes.dart';
+import 'package:quran_pro/core/services/audio_service.dart';
 import 'package:quran_pro/core/services/auth_service.dart';
-import 'package:quran_pro/core/services/location_service.dart';
-import 'package:quran_pro/core/services/notification_service.dart';
 import 'package:quran_pro/core/services/settings_service.dart';
+import 'package:quran_pro/core/services/tasbeeh_service.dart';
 import 'package:quran_pro/core/utils/hijri.dart';
+import 'package:quran_pro/domain/repositories/quran_audio_repository.dart';
 
 final class HomeViewModel extends GetxController {
-  HomeViewModel(this._auth, this._settings, this._location, this._notifications);
+  HomeViewModel(this._auth, this._settings, this._audio, this._quranAudio, this._tasbeeh);
 
   final AuthService _auth;
   final SettingsService _settings;
-  final LocationService _location;
-  final NotificationService _notifications;
+  final AudioService _audio;
+  final QuranAudioRepository _quranAudio;
+  final TasbeehService _tasbeeh;
 
-  static const tasbeehTarget = 33;
   static const ayahArabic = 'فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ';
+  // The ayah above (Al-Baqarah 2:152); `ayah_ref` / `ayah_location` must name the same verse.
+  static const ayahSurah = 2;
+  static const ayahNumber = 152;
+  static const _ayahTrack = 'ayah:$ayahSurah:$ayahNumber';
 
-  final RxString _place = ''.obs;
-  late final RxBool _alertsOn = _settings.prayerAlertsOn.obs;
-  final RxInt _tasbeeh = 0.obs;
   final RxBool _ayahBookmarked = false.obs;
   final RxBool _kidsMode = false.obs;
 
-  String get placeLabel => _place.value;
-  bool get alertsOn => _alertsOn.value;
-  int get tasbeehCount => _tasbeeh.value;
+  /// Geocoded town of the stored location. Never the time-zone city: Asia/Karachi covers all of
+  /// Pakistan, so it would name the wrong city.
+  String get placeLabel => _settings.placeName ?? 'your_location'.tr;
+  bool get alertsOn => _settings.prayerAlertsOn;
+  String get tasbeehBadge {
+    final s = _tasbeeh.state;
+    return '${s.count} / ${s.unlimited ? '∞' : s.target}';
+  }
+
+  String get tasbeehDhikr => _tasbeeh.state.dhikr.arabic;
   bool get ayahBookmarked => _ayahBookmarked.value;
   bool get kidsMode => _kidsMode.value;
+  AudioStatus get reciteStatus => _audio.statusOf(_ayahTrack);
 
   HijriDate get _hijri => Hijri.fromGregorian(DateTime.now());
   String get hijriLabel =>
@@ -80,24 +90,37 @@ final class HomeViewModel extends GetxController {
     ];
   }
 
-  @override
-  void onInit() {
-    super.onInit();
-    unawaited(_location.approximatePlaceName().then((name) => _place.value = name));
+  void openNotificationSettings() => Get.toNamed<void>(AppRoutes.prayerNotifications);
+
+  /// Play, pause or resume the ayah of the day; on failure, offer a retry.
+  Future<void> toggleRecite() async {
+    await _audio.toggle(_ayahTrack, _quranAudio.ayahAudio(surah: ayahSurah, ayah: ayahNumber));
+    if (reciteStatus != AudioStatus.error) return;
+    Get
+      ..closeAllSnackbars()
+      ..showSnackbar(
+        GetSnackBar(
+          message: (_audio.error == AudioError.offline ? 'audio_offline' : 'audio_unavailable').tr,
+          duration: const Duration(seconds: 5),
+          margin: const EdgeInsets.all(16),
+          borderRadius: 16,
+          mainButton: TextButton(
+            onPressed: () {
+              Get.closeAllSnackbars();
+              unawaited(toggleRecite());
+            },
+            child: Text('retry'.tr),
+          ),
+        ),
+      );
   }
 
-  Future<void> toggleAlerts() async {
-    final on = !_alertsOn.value;
-    if (on) await _notifications.requestPermission();
-    _alertsOn.value = on;
-    await _settings.setPrayerAlerts(on: on); // PrayerScheduleService reschedules on change
-  }
-
-  void tapTasbeeh() => _tasbeeh.value = _tasbeeh.value >= tasbeehTarget ? 1 : _tasbeeh.value + 1;
   void toggleAyahBookmark() => _ayahBookmarked.toggle();
   set kidsMode(bool on) => _kidsMode.value = on;
 
   void openPrayerTimes() => Get.toNamed<void>(AppRoutes.prayerTimes);
+  void openQibla() => Get.toNamed<void>(AppRoutes.qibla);
+  void openTasbeeh() => Get.toNamed<void>(AppRoutes.tasbeeh);
 
   void comingSoon() => Get
     ..closeAllSnackbars()

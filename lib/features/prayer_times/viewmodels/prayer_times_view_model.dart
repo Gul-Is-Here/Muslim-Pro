@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:quran_pro/app/routes/app_routes.dart';
 import 'package:quran_pro/core/errors/result.dart';
 import 'package:quran_pro/core/services/location_service.dart';
+import 'package:quran_pro/core/services/location_sync_service.dart';
 import 'package:quran_pro/core/services/settings_service.dart';
 import 'package:quran_pro/core/utils/app_log.dart';
 import 'package:quran_pro/core/utils/formatters.dart';
@@ -15,11 +17,12 @@ import 'package:quran_pro/data/models/user_location.dart';
 import 'package:quran_pro/domain/repositories/prayer_times_repository.dart';
 
 final class PrayerTimesViewModel extends GetxController {
-  PrayerTimesViewModel(this._prayers, this._location, this._settings);
+  PrayerTimesViewModel(this._prayers, this._location, this._settings, this._sync);
 
   final PrayerTimesRepository _prayers;
   final LocationService _location;
   final SettingsService _settings;
+  final LocationSyncService _sync;
 
   final _state = Rx<ViewState<DayPrayerTimes>>(const Idle());
   final Rx<LocationAccess> _access = LocationAccess.granted.obs;
@@ -138,18 +141,25 @@ final class PrayerTimesViewModel extends GetxController {
     if (_state.value is Loading) return;
     _state.value = const Loading();
     try {
-      _access.value = await _location.status();
-      if (_access.value == LocationAccess.granted) {
-        final fresh = await _location.current();
-        if (fresh != null && fresh != _settings.lastLocation) {
-          await _settings.setLastLocation(fresh); // also triggers notification reschedule
-        }
-      }
+      // Fresh GPS fix + place lookup; saving either recomputes times and reschedules alerts.
+      _access.value = await _sync.sync();
     } on Object catch (e, s) {
       AppLog.e(e, s); // fall back to the cached location below
     }
     _compute();
   }
+
+  /// "Burewala · Karachi method · Hanafi Asr": what the times are calculated for.
+  String get calculationLabel {
+    final s = _settings.prayerSettings;
+    return [
+      ?_settings.placeName,
+      'method_${s.method}'.tr,
+      (s.hanafiAsr ? 'asr_hanafi' : 'asr_standard').tr,
+    ].join(' · ');
+  }
+
+  void openNotificationSettings() => Get.toNamed<void>(AppRoutes.prayerNotifications);
 
   Future<void> onPermissionAction() async {
     switch (_access.value) {

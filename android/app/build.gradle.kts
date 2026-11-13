@@ -1,3 +1,4 @@
+import java.util.Base64
 import java.util.Properties
 
 plugins {
@@ -7,6 +8,13 @@ plugins {
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// Values from --dart-define / --dart-define-from-file=env/<flavor>.json (Flutter passes them
+// base64-encoded). Keeps the Maps key out of git, like every other per-environment value.
+val dartDefines: Map<String, String> =
+    (project.findProperty("dart-defines") as String?).orEmpty().split(",").filter { it.isNotEmpty() }
+        .map { String(Base64.getDecoder().decode(it)).split("=", limit = 2) }
+        .associate { it[0] to it.getOrElse(1) { "" } }
 
 val keystore = Properties().apply {
     rootProject.file("key.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
@@ -29,6 +37,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["mapsApiKey"] = dartDefines["GOOGLE_MAPS_API_KEY"].orEmpty()
     }
 
     signingConfigs {

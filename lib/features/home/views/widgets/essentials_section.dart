@@ -37,7 +37,7 @@ final class EssentialsSection extends GetView<HomeViewModel> {
               trailing: const Icon(Icons.navigation, size: 16, color: AppColors.amber600),
               title: 'qibla_finder'.tr,
               subtitle: const _QiblaSubtitle(),
-              onTap: controller.comingSoon,
+              onTap: controller.openQibla,
             ),
           ),
           Expanded(
@@ -47,19 +47,21 @@ final class EssentialsSection extends GetView<HomeViewModel> {
               iconFg: AppColors.emerald800,
               trailing: Obx(
                 () => _Badge(
-                  '${controller.tasbeehCount} / ${HomeViewModel.tasbeehTarget}',
+                  controller.tasbeehBadge,
                   bg: AppColors.primaryContainer,
                   fg: AppColors.emerald100,
                   mono: true,
                 ),
               ),
               title: 'digital_tasbeeh'.tr,
-              subtitle: _SubtitleText(
-                'سُبْحَانَ اللَّه • ${'tap_me'.tr}',
-                color: AppColors.emerald800,
-                weight: FontWeight.w600,
+              subtitle: Obx(
+                () => _SubtitleText(
+                  controller.tasbeehDhikr,
+                  color: AppColors.emerald800,
+                  weight: FontWeight.w600,
+                ),
               ),
-              onTap: controller.tapTasbeeh,
+              onTap: controller.openTasbeeh,
             ),
           ),
         ],
