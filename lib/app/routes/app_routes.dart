@@ -1,0 +1,19 @@
+abstract final class AppRoutes {
+  static const splash = '/splash';
+  static const onboarding = '/onboarding';
+  static const auth = '/auth';
+  static const signUp = '/auth/sign-up';
+  static const forgotPassword = '/auth/forgot-password';
+  static const home = '/home';
+  static const prayerTimes = '/prayer-times';
+  static const prayerNotifications = '/prayer-notifications';
+  static const qibla = '/qibla';
+  static const tasbeeh = '/tasbeeh';
+  static const learn = '/learn';
+  static const lesson = '/learn/lesson';
+  static const quran = '/quran';
+  static const surah = '/quran/surah';
+  static const ramadan = '/ramadan';
+  static const adhkar = '/adhkar';
+  static const more = '/more';
+}

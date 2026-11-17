@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "muslim-pro-72127",
+    "dev": "muslim-pro-72127",
+    "prod": "muslim-pro-72127"
+  }
+}

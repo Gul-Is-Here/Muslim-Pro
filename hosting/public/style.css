@@ -1,0 +1,73 @@
+:root {
+  --bg: #f8fafb;
+  --card: #ffffff;
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --brand: #042f2e;
+  --brand-2: #0d4740;
+  --accent: #047857;
+  --gold: #b45309;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #03150f;
+    --card: #06221c;
+    --ink: #ecfdf5;
+    --muted: #a7c4b8;
+    --line: #11352d;
+    --brand: #6ffbbe;
+    --brand-2: #0d4740;
+    --accent: #6ee7b7;
+    --gold: #fcd34d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+header {
+  background: linear-gradient(135deg, #093933, #0d4740 55%, #032521);
+  color: #fff;
+  padding: 36px 16px 32px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header .wrap { padding: 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+.brand img { width: 48px; height: 48px; border-radius: 12px; }
+.brand b { font-size: 22px; letter-spacing: -0.3px; }
+.brand span { font-family: "Amiri", serif; color: #fcd34d; font-size: 20px; }
+header h1 { font-size: 32px; line-height: 1.2; margin: 24px 0 6px; letter-spacing: -0.5px; }
+header p { margin: 0; color: #d1fae5; opacity: 0.85; }
+main { padding: 28px 0 48px; }
+h2 { font-size: 20px; margin: 32px 0 8px; color: var(--brand); }
+h3 { font-size: 16px; margin: 20px 0 4px; }
+p, li { color: var(--muted); }
+ul { padding-left: 20px; }
+a { color: var(--accent); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--ink); }
+td { color: var(--muted); }
+.table-scroll { overflow-x: auto; }
+footer { border-top: 1px solid var(--line); padding: 20px 0 40px; font-size: 14px; color: var(--muted); }
+footer a { margin-right: 16px; }
