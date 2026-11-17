@@ -1,5 +1,6 @@
 package com.islamicnoorapp.app
 
-import io.flutter.embedding.android.FlutterActivity
+import com.ryanheise.audioservice.AudioServiceActivity
 
-class MainActivity : FlutterActivity()
+// AudioServiceActivity (a FlutterActivity) lets the media notification reconnect to this engine.
+class MainActivity : AudioServiceActivity()

@@ -42,7 +42,16 @@ final class PrayerHeroCard extends GetView<PrayerTimesViewModel> {
               borderRadius: BorderRadius.circular(24),
               border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
             ),
-            child: Obx(() => controller.next == null ? const _NoLocation() : const _HeroContent()),
+            child: Obx(
+              () => controller.next != null
+                  ? const _HeroContent()
+                  : controller.locating
+                  ? const SizedBox(
+                      height: 160,
+                      child: Center(child: CircularProgressIndicator(color: AppColors.amber300)),
+                    )
+                  : const _NoLocation(),
+            ),
           ),
         ],
       ),

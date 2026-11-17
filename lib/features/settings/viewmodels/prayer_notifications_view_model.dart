@@ -51,21 +51,14 @@ final class PrayerNotificationsViewModel extends GetxController {
     unawaited(_refreshPermissions());
   }
 
-  /// Next occurrence of [p] ("Today, 5:10 AM"), or null until a location is known.
-  String? nextTimeLabel(Prayer p) {
+  /// Today's time for [p] ("5:10 AM"), or null until a location is known.
+  String? timeLabel(Prayer p) {
     final loc = _settings.lastLocation;
     if (loc == null) return null;
-    final now = DateTime.now();
-    for (var d = 0; d < 2; d++) {
-      final day = DateTime(now.year, now.month, now.day + d);
-      if (_prayers.timesFor(day, loc, _settings.prayerSettings) case Ok(:final value)) {
-        final at = value.times[p]!;
-        if (at.isAfter(now)) {
-          return (d == 0 ? 'today_at' : 'tomorrow_at').trParams({'time': Formatters.clock(at)});
-        }
-      }
-    }
-    return null;
+    return switch (_prayers.timesFor(DateTime.now(), loc, _settings.prayerSettings)) {
+      Ok(:final value) => Formatters.clock(value.times[p]!),
+      Err() => null,
+    };
   }
 
   Future<void> setMaster({required bool on}) async {
@@ -83,8 +76,11 @@ final class PrayerNotificationsViewModel extends GetxController {
   AudioStatus previewStatus(AzanSound s) => _audio.statusOf(_previewId(s));
 
   /// One preview at a time: the app-wide player replaces whatever was playing.
-  Future<void> togglePreview(AzanSound s) =>
-      _audio.toggle(_previewId(s), Uri.parse('asset:///${s.previewAsset}'));
+  Future<void> togglePreview(AzanSound s) => _audio.toggle(
+    _previewId(s),
+    Uri.parse('asset:///${s.previewAsset}'),
+    info: (title: s.labelKey.tr, subtitle: 'azan_sound'.tr),
+  );
 
   void stopPreview() {
     if (_audio.trackId?.startsWith(_previewPrefix) ?? false) unawaited(_audio.stop());

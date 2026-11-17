@@ -43,14 +43,14 @@ void main() {
   test("disabled prayers are left out; each alert carries its prayer's sound", () {
     final prefs = const PrayerAlertSettings()
         .withEnabled(Prayer.fajr, on: false)
-        .withSound(Prayer.isha, AzanSound.hamtramck)
+        .withSound(Prayer.isha, AzanSound.madinah)
         .withSound(Prayer.maghrib, AzanSound.system);
     final alerts = build(prefs);
     expect(alerts.where((a) => a.title == Prayer.fajr.labelKey), isEmpty);
     expect(alerts.length, 3 + 4 + 4);
     for (final a in alerts) {
       final expected = switch (a.title) {
-        'prayer_isha' => AzanSound.hamtramck,
+        'prayer_isha' => AzanSound.madinah,
         'prayer_maghrib' => AzanSound.system,
         _ => AzanSound.fallback,
       };

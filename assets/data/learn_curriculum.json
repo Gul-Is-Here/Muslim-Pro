@@ -1,0 +1,2433 @@
+{
+ "version": 1,
+ "units": [
+  {
+   "id": "kalimas",
+   "icon": "kalimas",
+   "kids": true,
+   "title": {
+    "en": "The 6 Kalimas",
+    "ur": "چھ کلمے",
+    "ar": "الكلمات الست"
+   },
+   "tag": {
+    "en": "Foundations of Iman",
+    "ur": "ایمان کی بنیاد",
+    "ar": "أسس الإيمان"
+   },
+   "lessons": [
+    {
+     "id": "kalimas_1",
+     "xp": 15,
+     "title": {
+      "en": "Tayyab & Shahadat",
+      "ur": "طیب اور شہادت",
+      "ar": "الطيبة والشهادة"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "About the Kalimas",
+        "ur": "کلموں کا تعارف"
+       },
+       "body": {
+        "en": "The Six Kalimas are a traditional teaching set from the Indian subcontinent. Their words come from the Quran and hadith; they are not listed together in one hadith.",
+        "ur": "چھ کلمے برصغیر کی روایتی تعلیمی ترتیب ہیں۔ ان کے الفاظ قرآن و حدیث سے ماخوذ ہیں، مگر یہ کسی ایک حدیث میں اکٹھے مذکور نہیں۔"
+       }
+      },
+      {
+       "title": {
+        "en": "1st Kalima · Tayyab (Purity)",
+        "ur": "پہلا کلمہ · طیب"
+       },
+       "body": {
+        "en": "There is no god but Allah; Muhammad is the Messenger of Allah.",
+        "ur": "اللہ کے سوا کوئی معبود نہیں، محمد ﷺ اللہ کے رسول ہیں۔"
+       },
+       "arabic": "لَا إِلٰهَ إِلَّا اللّٰهُ مُحَمَّدٌ رَّسُوْلُ اللّٰهِ",
+       "translit": "La ilaha illallahu Muhammadur Rasulullah",
+       "audio": "assets/audio/phrases/kalima_1.mp3"
+      },
+      {
+       "title": {
+        "en": "2nd Kalima · Shahadat (Testimony)",
+        "ur": "دوسرا کلمہ · شہادت"
+       },
+       "body": {
+        "en": "I bear witness that there is no god but Allah, alone, without partner, and I bear witness that Muhammad is His servant and Messenger.",
+        "ur": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں۔"
+       },
+       "arabic": "أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهٗ لَا شَرِيْكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُوْلُهٗ",
+       "translit": "Ash-hadu an la ilaha illallahu wahdahu la sharika lahu wa ash-hadu anna Muhammadan 'abduhu wa rasuluh",
+       "audio": "assets/audio/phrases/kalima_2.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which Kalima is this?",
+        "ur": "یہ کون سا کلمہ ہے؟"
+       },
+       "options": [
+        {
+         "en": "Tayyab",
+         "ur": "طیب"
+        },
+        {
+         "en": "Tamjeed",
+         "ur": "تمجید"
+        },
+        {
+         "en": "Astaghfar",
+         "ur": "استغفار"
+        }
+       ],
+       "answer": 0,
+       "arabic": "لَا إِلٰهَ إِلَّا اللّٰهُ مُحَمَّدٌ رَّسُوْلُ اللّٰهِ"
+      },
+      {
+       "prompt": {
+        "en": "What does “Shahadat” mean?",
+        "ur": "“شہادت” کا مطلب کیا ہے؟"
+       },
+       "options": [
+        {
+         "en": "Glorification",
+         "ur": "بڑائی بیان کرنا"
+        },
+        {
+         "en": "Testimony",
+         "ur": "گواہی"
+        },
+        {
+         "en": "Repentance",
+         "ur": "توبہ"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "Complete: “La ilaha illallahu Muhammadur …”",
+        "ur": "مکمل کریں: “لا الٰہ الا اللہ محمد …”"
+       },
+       "options": [
+        "Rasulullah",
+        "Abduhu",
+        "Akbar"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "In the 2nd Kalima, Muhammad ﷺ is described as Allah's…",
+        "ur": "دوسرے کلمے میں محمد ﷺ کو اللہ کا … کہا گیا ہے"
+       },
+       "options": [
+        {
+         "en": "servant and Messenger",
+         "ur": "بندہ اور رسول"
+        },
+        {
+         "en": "king",
+         "ur": "بادشاہ"
+        },
+        {
+         "en": "partner",
+         "ur": "شریک"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "kalimas_2",
+     "xp": 15,
+     "title": {
+      "en": "Tamjeed & Tauheed",
+      "ur": "تمجید اور توحید",
+      "ar": "التمجيد والتوحيد"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "3rd Kalima · Tamjeed (Glorification)",
+        "ur": "تیسرا کلمہ · تمجید"
+       },
+       "body": {
+        "en": "Glory be to Allah, all praise is for Allah, there is no god but Allah, and Allah is the Greatest. There is no power and no strength except with Allah, the Most High, the Most Great.",
+        "ur": "اللہ پاک ہے، سب تعریفیں اللہ کے لیے ہیں، اللہ کے سوا کوئی معبود نہیں اور اللہ سب سے بڑا ہے۔ گناہ سے بچنے کی طاقت اور نیکی کی قوت نہیں مگر اللہ کی طرف سے جو بلند اور عظمت والا ہے۔"
+       },
+       "arabic": "سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلٰهَ إِلَّا اللّٰهُ وَاللّٰهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظِيْمِ",
+       "translit": "Subhanallahi walhamdu lillahi wa la ilaha illallahu wallahu akbar, wa la hawla wa la quwwata illa billahil 'aliyyil 'azeem",
+       "audio": "assets/audio/phrases/kalima_3.mp3"
+      },
+      {
+       "title": {
+        "en": "4th Kalima · Tauheed (Oneness)",
+        "ur": "چوتھا کلمہ · توحید"
+       },
+       "body": {
+        "en": "There is no god but Allah, alone, without partner. His is the dominion and His is the praise. He gives life and causes death, and He is Ever-Living and will never die. Owner of Majesty and Honour; in His hand is all good, and He has power over everything.",
+        "ur": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں۔ اسی کی بادشاہی ہے اور اسی کے لیے تعریف ہے۔ وہی زندہ کرتا اور مارتا ہے، وہ ہمیشہ زندہ ہے، اسے کبھی موت نہیں آئے گی۔ بڑے جلال اور عزت والا ہے، اسی کے ہاتھ میں بھلائی ہے اور وہ ہر چیز پر قادر ہے۔"
+       },
+       "arabic": "لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهٗ لَا شَرِيْكَ لَهٗ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِيْ وَيُمِيْتُ وَهُوَ حَيٌّ لَّا يَمُوْتُ أَبَدًا أَبَدًا ذُو الْجَلَالِ وَالْإِكْرَامِ بِيَدِهِ الْخَيْرُ وَهُوَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ",
+       "translit": "La ilaha illallahu wahdahu la sharika lahu, lahul mulku wa lahul hamdu, yuhyi wa yumitu, wa huwa hayyul la yamutu abadan abada, dhul jalali wal ikram, biyadihil khair, wa huwa 'ala kulli shay'in qadeer",
+       "audio": "assets/audio/phrases/kalima_4.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "“Subhanallah” means…",
+        "ur": "“سبحان اللہ” کا مطلب ہے…"
+       },
+       "options": [
+        {
+         "en": "Glory be to Allah",
+         "ur": "اللہ پاک ہے"
+        },
+        {
+         "en": "Allah is the Greatest",
+         "ur": "اللہ سب سے بڑا ہے"
+        },
+        {
+         "en": "All praise is for Allah",
+         "ur": "سب تعریف اللہ کے لیے ہے"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which Kalima begins with “Subhanallah”?",
+        "ur": "کون سا کلمہ “سبحان اللہ” سے شروع ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "2nd · Shahadat",
+         "ur": "دوسرا · شہادت"
+        },
+        {
+         "en": "3rd · Tamjeed",
+         "ur": "تیسرا · تمجید"
+        },
+        {
+         "en": "6th · Radd-e-Kufr",
+         "ur": "چھٹا · رد کفر"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "“Tauheed” means…",
+        "ur": "“توحید” کا مطلب ہے…"
+       },
+       "options": [
+        {
+         "en": "The Oneness of Allah",
+         "ur": "اللہ کی وحدانیت"
+        },
+        {
+         "en": "Seeking forgiveness",
+         "ur": "معافی مانگنا"
+        },
+        {
+         "en": "Purity",
+         "ur": "پاکیزگی"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "The 4th Kalima says Allah is “hayyun la yamut”. What does it mean?",
+        "ur": "چوتھے کلمے میں “حیٌّ لا یموت” کا مطلب کیا ہے؟"
+       },
+       "options": [
+        {
+         "en": "Ever-Living, never dies",
+         "ur": "ہمیشہ زندہ، کبھی نہیں مرے گا"
+        },
+        {
+         "en": "Most Merciful",
+         "ur": "بہت رحم والا"
+        },
+        {
+         "en": "All-Hearing",
+         "ur": "سب سننے والا"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "kalimas_3",
+     "xp": 15,
+     "title": {
+      "en": "Astaghfar & Radd-e-Kufr",
+      "ur": "استغفار اور رد کفر",
+      "ar": "الاستغفار ورد الكفر"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "5th Kalima · Astaghfar (Forgiveness)",
+        "ur": "پانچواں کلمہ · استغفار"
+       },
+       "body": {
+        "en": "I seek forgiveness from Allah, my Lord, for every sin I committed knowingly or by mistake, secretly or openly, and I turn to Him from the sin I know and the sin I do not know. You are the Knower of the unseen, the Concealer of faults and the Forgiver of sins; there is no power and no strength except with Allah, the Most High, the Most Great.",
+        "ur": "میں اللہ سے معافی مانگتا ہوں جو میرا رب ہے، ہر گناہ سے جو میں نے جان بوجھ کر یا بھول کر، چھپ کر یا کھلم کھلا کیا، اور اس کی طرف توبہ کرتا ہوں اس گناہ سے جو میں جانتا ہوں اور جو نہیں جانتا۔ بے شک تو غیب جاننے والا، عیب چھپانے والا اور گناہ بخشنے والا ہے، اور طاقت و قوت صرف اللہ بلند و عظیم کی طرف سے ہے۔"
+       },
+       "arabic": "أَسْتَغْفِرُ اللّٰهَ رَبِّيْ مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهٗ عَمْدًا أَوْ خَطَأً سِرًّا أَوْ عَلَانِيَةً وَّأَتُوْبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِيْ أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِيْ لَا أَعْلَمُ إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوْبِ وَسَتَّارُ الْعُيُوْبِ وَغَفَّارُ الذُّنُوْبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظِيْمِ",
+       "translit": "Astaghfirullaha rabbi min kulli dhambin adhnabtuhu 'amdan aw khata'an sirran aw 'alaniyatan wa atubu ilayhi minadh-dhambil ladhi a'lamu wa minadh-dhambil ladhi la a'lamu, innaka anta 'allamul ghuyubi wa sattarul 'uyubi wa ghaffarudh dhunubi wa la hawla wa la quwwata illa billahil 'aliyyil 'azeem",
+       "audio": "assets/audio/phrases/kalima_5.mp3"
+      },
+      {
+       "title": {
+        "en": "6th Kalima · Radd-e-Kufr (Rejecting disbelief)",
+        "ur": "چھٹا کلمہ · رد کفر"
+       },
+       "body": {
+        "en": "O Allah, I seek refuge in You from knowingly associating anything with You, and I seek Your forgiveness for what I do not know. I repent from it and free myself from disbelief, shirk, lying, backbiting, innovation, tale-carrying, indecency, slander and all sins. I submit, and I say: there is no god but Allah, Muhammad is the Messenger of Allah.",
+        "ur": "اے اللہ! میں تیری پناہ مانگتا ہوں کہ جان بوجھ کر کسی چیز کو تیرا شریک بناؤں، اور اس سے معافی مانگتا ہوں جو میں نہیں جانتا۔ میں نے اس سے توبہ کی اور بیزار ہوا کفر، شرک، جھوٹ، غیبت، بدعت، چغلی، بے حیائی، بہتان اور تمام گناہوں سے۔ میں اسلام لایا اور کہتا ہوں: اللہ کے سوا کوئی معبود نہیں، محمد ﷺ اللہ کے رسول ہیں۔"
+       },
+       "arabic": "اَللّٰهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَّأَنَا أَعْلَمُ بِهٖ وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهٖ تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيْبَةِ وَالْبِدْعَةِ وَالنَّمِيْمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِيْ كُلِّهَا وَأَسْلَمْتُ وَأَقُوْلُ لَا إِلٰهَ إِلَّا اللّٰهُ مُحَمَّدٌ رَّسُوْلُ اللّٰهِ",
+       "translit": "Allahumma inni a'udhu bika min an ushrika bika shay'an wa ana a'lamu bihi wa astaghfiruka lima la a'lamu bihi, tubtu 'anhu wa tabarra'tu minal kufri wash-shirki wal kidhbi wal ghibati wal bid'ati wan-namimati wal fawahishi wal buhtani wal ma'asi kulliha, wa aslamtu wa aqulu la ilaha illallahu Muhammadur Rasulullah",
+       "audio": "assets/audio/phrases/kalima_6.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "“Astaghfirullah” means…",
+        "ur": "“استغفر اللہ” کا مطلب ہے…"
+       },
+       "options": [
+        {
+         "en": "I seek Allah's forgiveness",
+         "ur": "میں اللہ سے معافی مانگتا ہوں"
+        },
+        {
+         "en": "I bear witness",
+         "ur": "میں گواہی دیتا ہوں"
+        },
+        {
+         "en": "In the name of Allah",
+         "ur": "اللہ کے نام سے"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "The 6th Kalima rejects…",
+        "ur": "چھٹا کلمہ کس چیز کا انکار ہے؟"
+       },
+       "options": [
+        {
+         "en": "Disbelief and shirk",
+         "ur": "کفر اور شرک"
+        },
+        {
+         "en": "Fasting",
+         "ur": "روزہ"
+        },
+        {
+         "en": "Charity",
+         "ur": "صدقہ"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which Kalima ends with the words of the 1st Kalima?",
+        "ur": "کون سا کلمہ پہلے کلمے کے الفاظ پر ختم ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "6th · Radd-e-Kufr",
+         "ur": "چھٹا · رد کفر"
+        },
+        {
+         "en": "3rd · Tamjeed",
+         "ur": "تیسرا · تمجید"
+        },
+        {
+         "en": "5th · Astaghfar",
+         "ur": "پانچواں · استغفار"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "“Ghibah”, named in the 6th Kalima, is…",
+        "ur": "چھٹے کلمے میں مذکور “غیبت” کیا ہے؟"
+       },
+       "options": [
+        {
+         "en": "Backbiting",
+         "ur": "کسی کی پیٹھ پیچھے برائی"
+        },
+        {
+         "en": "Prayer",
+         "ur": "نماز"
+        },
+        {
+         "en": "Travel",
+         "ur": "سفر"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "How many Kalimas are traditionally taught?",
+        "ur": "روایتی طور پر کتنے کلمے سکھائے جاتے ہیں؟"
+       },
+       "options": [
+        "4",
+        "6",
+        "7"
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wudu",
+   "icon": "wudu",
+   "kids": false,
+   "title": {
+    "en": "Wudu (Purification)",
+    "ur": "وضو (طہارت)",
+    "ar": "الوضوء"
+   },
+   "tag": {
+    "en": "Fardh & Sunnah",
+    "ur": "فرض و سنت",
+    "ar": "فرض وسنة"
+   },
+   "lessons": [
+    {
+     "id": "wudu_1",
+     "xp": 15,
+     "title": {
+      "en": "Intention, Hands, Mouth & Nose",
+      "ur": "نیت، ہاتھ، کلی اور ناک",
+      "ar": "النية واليدان والمضمضة"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Why wudu?",
+        "ur": "وضو کیوں؟"
+       },
+       "body": {
+        "en": "Wudu is required for salah. Allah says: “O you who believe, when you rise for prayer, wash your faces and your arms to the elbows, wipe your heads, and wash your feet to the ankles.”",
+        "ur": "نماز کے لیے وضو ضروری ہے۔ اللہ تعالیٰ فرماتا ہے: “اے ایمان والو! جب نماز کے لیے اٹھو تو اپنے چہرے اور کہنیوں تک ہاتھ دھوؤ، سروں کا مسح کرو اور ٹخنوں تک پاؤں دھوؤ۔”"
+       },
+       "ref": "Al-Ma'idah 5:6"
+      },
+      {
+       "title": {
+        "en": "1 · Intention & Bismillah",
+        "ur": "1 · نیت اور بسم اللہ"
+       },
+       "body": {
+        "en": "Make the intention in your heart to purify yourself for Allah, and begin with “Bismillah”.",
+        "ur": "دل میں اللہ کے لیے پاکی حاصل کرنے کی نیت کریں اور “بسم اللہ” سے شروع کریں۔"
+       },
+       "arabic": "بِسْمِ اللّٰهِ",
+       "translit": "Bismillah",
+       "audio": "assets/audio/phrases/bismillah.mp3"
+      },
+      {
+       "title": {
+        "en": "2 · Hands, mouth and nose",
+        "ur": "2 · ہاتھ، کلی اور ناک"
+       },
+       "body": {
+        "en": "Wash both hands up to the wrists three times, rinse the mouth three times, then sniff water into the nose and blow it out three times. These are Sunnah acts.",
+        "ur": "دونوں ہاتھ کلائیوں تک تین بار دھوئیں، تین بار کلی کریں، پھر تین بار ناک میں پانی ڈال کر صاف کریں۔ یہ سنت اعمال ہیں۔"
+       },
+       "ref": "Bukhari 159"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "What do you say when starting wudu?",
+        "ur": "وضو شروع کرتے وقت کیا کہتے ہیں؟"
+       },
+       "options": [
+        "Bismillah",
+        "Allahu Akbar",
+        "Ameen"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "How many times are the hands washed at the start?",
+        "ur": "شروع میں ہاتھ کتنی بار دھوئے جاتے ہیں؟"
+       },
+       "options": [
+        "1",
+        "3",
+        "7"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "Where is the intention made?",
+        "ur": "نیت کہاں ہوتی ہے؟"
+       },
+       "options": [
+        {
+         "en": "In the heart",
+         "ur": "دل میں"
+        },
+        {
+         "en": "Written on paper",
+         "ur": "کاغذ پر لکھ کر"
+        },
+        {
+         "en": "Only aloud",
+         "ur": "صرف بلند آواز سے"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which verse describes wudu?",
+        "ur": "کون سی آیت وضو کا طریقہ بیان کرتی ہے؟"
+       },
+       "options": [
+        "Al-Ma'idah 5:6",
+        "Al-Fatiha 1:1",
+        "Al-Ikhlas 112:1"
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "wudu_2",
+     "xp": 15,
+     "title": {
+      "en": "The Face & the 4 Fard",
+      "ur": "چہرہ اور چار فرض",
+      "ar": "الوجه والفرائض الأربعة"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "3 · Wash the face",
+        "ur": "3 · چہرہ دھونا"
+       },
+       "body": {
+        "en": "Wash the whole face three times: from the hairline to below the chin, and from one earlobe to the other.",
+        "ur": "پورا چہرہ تین بار دھوئیں: پیشانی کے بالوں سے ٹھوڑی کے نیچے تک، اور ایک کان کی لو سے دوسرے کان کی لو تک۔"
+       }
+      },
+      {
+       "title": {
+        "en": "The 4 Fard (Hanafi)",
+        "ur": "وضو کے چار فرض (حنفی)"
+       },
+       "body": {
+        "en": "Four acts are obligatory, taken from Quran 5:6: ① wash the face, ② wash both arms including the elbows, ③ wipe at least a quarter of the head, ④ wash both feet including the ankles. Missing any of these means the wudu is not valid.",
+        "ur": "قرآن 5:6 سے چار کام فرض ہیں: ① چہرہ دھونا، ② کہنیوں سمیت دونوں بازو دھونا، ③ کم از کم چوتھائی سر کا مسح، ④ ٹخنوں سمیت دونوں پاؤں دھونا۔ ان میں سے ایک بھی رہ جائے تو وضو نہیں ہوتا۔"
+       },
+       "ref": "Al-Ma'idah 5:6"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "How many fard acts does wudu have (Hanafi)?",
+        "ur": "حنفی فقہ میں وضو کے کتنے فرض ہیں؟"
+       },
+       "options": [
+        "2",
+        "4",
+        "6"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "The face is washed from the hairline to…",
+        "ur": "چہرہ پیشانی کے بالوں سے کہاں تک دھویا جاتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "below the chin",
+         "ur": "ٹھوڑی کے نیچے تک"
+        },
+        {
+         "en": "the nose",
+         "ur": "ناک تک"
+        },
+        {
+         "en": "the neck",
+         "ur": "گردن تک"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which of these is fard in wudu?",
+        "ur": "ان میں سے کیا وضو میں فرض ہے؟"
+       },
+       "options": [
+        {
+         "en": "Rinsing the mouth",
+         "ur": "کلی کرنا"
+        },
+        {
+         "en": "Washing the face",
+         "ur": "چہرہ دھونا"
+        },
+        {
+         "en": "Washing the hands",
+         "ur": "ہاتھ دھونا"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "How much of the head must be wiped at minimum?",
+        "ur": "کم از کم کتنے سر کا مسح فرض ہے؟"
+       },
+       "options": [
+        {
+         "en": "A quarter",
+         "ur": "چوتھائی"
+        },
+        {
+         "en": "Just one hair",
+         "ur": "ایک بال"
+        },
+        {
+         "en": "The whole neck",
+         "ur": "پوری گردن"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "wudu_3",
+     "xp": 15,
+     "title": {
+      "en": "Arms & Head Masah",
+      "ur": "بازو اور سر کا مسح",
+      "ar": "اليدان ومسح الرأس"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "4 · Wash the arms",
+        "ur": "4 · بازو دھونا"
+       },
+       "body": {
+        "en": "Wash the right arm from the fingertips up to and including the elbow three times, then the left arm the same way. Starting with the right is Sunnah.",
+        "ur": "دایاں بازو انگلیوں سے کہنی سمیت تین بار دھوئیں، پھر بایاں بازو اسی طرح۔ دائیں سے شروع کرنا سنت ہے۔"
+       },
+       "ref": "Bukhari 168"
+      },
+      {
+       "title": {
+        "en": "5 · Masah of the head and ears",
+        "ur": "5 · سر اور کانوں کا مسح"
+       },
+       "body": {
+        "en": "Wet the hands and wipe the head once, from the front to the back and back again. Then wipe the inside of the ears with the index fingers and the back of the ears with the thumbs.",
+        "ur": "ہاتھ گیلے کر کے ایک بار سر کا مسح کریں، آگے سے پیچھے اور واپس آگے۔ پھر شہادت کی انگلیوں سے کانوں کے اندر اور انگوٹھوں سے کانوں کے پیچھے مسح کریں۔"
+       },
+       "ref": "Bukhari 185 · Nasa'i 102"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which arm is washed first?",
+        "ur": "پہلے کون سا بازو دھویا جاتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "Right",
+         "ur": "دایاں"
+        },
+        {
+         "en": "Left",
+         "ur": "بایاں"
+        },
+        {
+         "en": "Either, no Sunnah",
+         "ur": "کوئی بھی، کوئی سنت نہیں"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "The arms are washed up to…",
+        "ur": "بازو کہاں تک دھوئے جاتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "the wrists",
+         "ur": "کلائیوں تک"
+        },
+        {
+         "en": "and including the elbows",
+         "ur": "کہنیوں سمیت"
+        },
+        {
+         "en": "the shoulders",
+         "ur": "کندھوں تک"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "How many times is the head wiped?",
+        "ur": "سر کا مسح کتنی بار ہوتا ہے؟"
+       },
+       "options": [
+        "1",
+        "3",
+        "5"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "The back of the ears is wiped with…",
+        "ur": "کانوں کے پیچھے کا مسح کس سے ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "the thumbs",
+         "ur": "انگوٹھوں سے"
+        },
+        {
+         "en": "the palms",
+         "ur": "ہتھیلیوں سے"
+        },
+        {
+         "en": "a towel",
+         "ur": "تولیے سے"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "wudu_4",
+     "xp": 15,
+     "title": {
+      "en": "Feet & the Dua After Wudu",
+      "ur": "پاؤں اور وضو کے بعد کی دعا",
+      "ar": "القدمان ودعاء الوضوء"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "6 · Wash the feet",
+        "ur": "6 · پاؤں دھونا"
+       },
+       "body": {
+        "en": "Wash the right foot up to and including the ankle three times, passing water between the toes, then the left foot.",
+        "ur": "دایاں پاؤں ٹخنے سمیت تین بار دھوئیں، انگلیوں کے درمیان خلال کریں، پھر بایاں پاؤں۔"
+       }
+      },
+      {
+       "title": {
+        "en": "Dua after wudu",
+        "ur": "وضو کے بعد کی دعا"
+       },
+       "body": {
+        "en": "“I bear witness that there is no god but Allah alone, with no partner, and I bear witness that Muhammad is His servant and His Messenger.” The gates of Paradise are opened for whoever says it.",
+        "ur": "“میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں۔” جو یہ پڑھے اس کے لیے جنت کے دروازے کھول دیے جاتے ہیں۔"
+       },
+       "arabic": "أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهٗ لَا شَرِيْكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُوْلُهٗ",
+       "translit": "Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan 'abduhu wa rasuluh",
+       "ref": "Muslim 234",
+       "audio": "assets/audio/phrases/kalima_2.mp3"
+      },
+      {
+       "title": {
+        "en": "And then",
+        "ur": "اور پھر"
+       },
+       "body": {
+        "en": "“O Allah, make me among those who repent, and make me among those who purify themselves.”",
+        "ur": "“اے اللہ! مجھے توبہ کرنے والوں میں سے بنا دے اور مجھے پاکیزگی اختیار کرنے والوں میں سے بنا دے۔”"
+       },
+       "arabic": "اَللّٰهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ",
+       "translit": "Allahummaj'alni minat-tawwabina waj'alni minal-mutatahhirin",
+       "ref": "Tirmidhi 55",
+       "audio": "assets/audio/phrases/wudu_tawwabin.mp3"
+      },
+      {
+       "title": {
+        "en": "What breaks wudu",
+        "ur": "وضو توڑنے والی چیزیں"
+       },
+       "body": {
+        "en": "Using the toilet or passing wind, deep sleep while lying down or leaning, losing consciousness. In the Hanafi school, flowing blood or pus and vomiting a mouthful also break wudu.",
+        "ur": "پیشاب، پاخانہ یا ہوا کا خارج ہونا، لیٹ کر یا ٹیک لگا کر گہری نیند، بے ہوشی۔ حنفی فقہ میں بہتا ہوا خون یا پیپ اور منہ بھر کر قے بھی وضو توڑ دیتے ہیں۔"
+       }
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "The feet are washed up to…",
+        "ur": "پاؤں کہاں تک دھوئے جاتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "and including the ankles",
+         "ur": "ٹخنوں سمیت"
+        },
+        {
+         "en": "the toes only",
+         "ur": "صرف انگلیوں تک"
+        },
+        {
+         "en": "the knees",
+         "ur": "گھٹنوں تک"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is opened for the one who says the dua after wudu?",
+        "ur": "وضو کے بعد کی دعا پڑھنے والے کے لیے کیا کھولا جاتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "The gates of Paradise",
+         "ur": "جنت کے دروازے"
+        },
+        {
+         "en": "The mosque",
+         "ur": "مسجد"
+        },
+        {
+         "en": "A new book",
+         "ur": "نئی کتاب"
+        }
+       ],
+       "answer": 0,
+       "arabic": "أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهٗ لَا شَرِيْكَ لَهٗ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُوْلُهٗ"
+      },
+      {
+       "prompt": {
+        "en": "Which of these breaks wudu?",
+        "ur": "ان میں سے کیا وضو توڑتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "Deep sleep lying down",
+         "ur": "لیٹ کر گہری نیند"
+        },
+        {
+         "en": "Drinking water",
+         "ur": "پانی پینا"
+        },
+        {
+         "en": "Reading the Quran",
+         "ur": "قرآن پڑھنا"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "“Al-mutatahhirin” means those who…",
+        "ur": "“المتطہرین” کا مطلب ہے وہ لوگ جو…"
+       },
+       "options": [
+        {
+         "en": "purify themselves",
+         "ur": "پاکیزگی اختیار کرتے ہیں"
+        },
+        {
+         "en": "travel",
+         "ur": "سفر کرتے ہیں"
+        },
+        {
+         "en": "fast",
+         "ur": "روزہ رکھتے ہیں"
+        }
+       ],
+       "answer": 0,
+       "arabic": "اَللّٰهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "salah",
+   "icon": "salah",
+   "kids": false,
+   "title": {
+    "en": "Step-by-Step Namaz",
+    "ur": "نماز مرحلہ وار",
+    "ar": "الصلاة خطوة بخطوة"
+   },
+   "tag": {
+    "en": "The 2nd pillar",
+    "ur": "دوسرا رکن",
+    "ar": "الركن الثاني"
+   },
+   "lessons": [
+    {
+     "id": "salah_1",
+     "xp": 15,
+     "title": {
+      "en": "The 5 Prayers & Conditions",
+      "ur": "پانچ نمازیں اور شرائط",
+      "ar": "الصلوات الخمس وشروطها"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "The five daily prayers",
+        "ur": "پانچ وقت کی نمازیں"
+       },
+       "body": {
+        "en": "Fard rak'ahs: Fajr 2 · Dhuhr 4 · Asr 4 · Maghrib 3 · Isha 4. The Prophet ﷺ also prayed Sunnah rak'ahs around them, and Witr after Isha.",
+        "ur": "فرض رکعات: فجر 2 · ظہر 4 · عصر 4 · مغرب 3 · عشاء 4۔ نبی ﷺ ان کے ساتھ سنتیں بھی پڑھتے تھے اور عشاء کے بعد وتر۔"
+       }
+      },
+      {
+       "title": {
+        "en": "Before you pray",
+        "ur": "نماز سے پہلے"
+       },
+       "body": {
+        "en": "Conditions of salah: be in wudu; clean body, clothes and place; cover the body properly; face the Qibla; the prayer's time has started; and make the intention.",
+        "ur": "نماز کی شرائط: باوضو ہونا؛ جسم، کپڑے اور جگہ کا پاک ہونا؛ ستر ڈھانپنا؛ قبلہ رخ ہونا؛ نماز کا وقت ہونا؛ اور نیت کرنا۔"
+       }
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "How many fard rak'ahs is Maghrib?",
+        "ur": "مغرب کی فرض رکعتیں کتنی ہیں؟"
+       },
+       "options": [
+        "2",
+        "3",
+        "4"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "How many fard rak'ahs is Fajr?",
+        "ur": "فجر کی فرض رکعتیں کتنی ہیں؟"
+       },
+       "options": [
+        "2",
+        "3",
+        "4"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which is a condition of salah?",
+        "ur": "نماز کی شرط کون سی ہے؟"
+       },
+       "options": [
+        {
+         "en": "Facing the Qibla",
+         "ur": "قبلہ رخ ہونا"
+        },
+        {
+         "en": "Praying in a group only",
+         "ur": "صرف جماعت سے پڑھنا"
+        },
+        {
+         "en": "Wearing white",
+         "ur": "سفید لباس پہننا"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which prayer has 4 fard rak'ahs?",
+        "ur": "کس نماز کی 4 فرض رکعتیں ہیں؟"
+       },
+       "options": [
+        "Fajr",
+        "Asr",
+        "Maghrib"
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "id": "salah_2",
+     "xp": 15,
+     "title": {
+      "en": "Takbir, Thana & Fatiha",
+      "ur": "تکبیر، ثنا اور فاتحہ",
+      "ar": "التكبير والثناء والفاتحة"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "1 · Takbir",
+        "ur": "1 · تکبیر تحریمہ"
+       },
+       "body": {
+        "en": "Stand facing the Qibla, raise both hands and say “Allahu Akbar” to begin. Then place the right hand over the left.",
+        "ur": "قبلہ رخ کھڑے ہو کر دونوں ہاتھ اٹھائیں اور “اللہ اکبر” کہہ کر نماز شروع کریں۔ پھر دایاں ہاتھ بائیں ہاتھ پر رکھیں۔"
+       },
+       "arabic": "اَللّٰهُ أَكْبَرُ",
+       "translit": "Allahu Akbar",
+       "audio": "assets/audio/phrases/takbir.mp3"
+      },
+      {
+       "title": {
+        "en": "2 · Thana (opening praise)",
+        "ur": "2 · ثنا"
+       },
+       "body": {
+        "en": "“Glory and praise be to You, O Allah. Blessed is Your name, exalted is Your majesty, and there is no god besides You.”",
+        "ur": "“اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، تیرا نام بابرکت ہے، تیری شان بلند ہے اور تیرے سوا کوئی معبود نہیں۔”"
+       },
+       "arabic": "سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالٰى جَدُّكَ وَلَا إِلٰهَ غَيْرُكَ",
+       "translit": "Subhanakallahumma wa bihamdika wa tabarakasmuka wa ta'ala jadduka wa la ilaha ghairuk",
+       "ref": "Abu Dawud 776 · Tirmidhi 243",
+       "audio": "assets/audio/phrases/thana.mp3"
+      },
+      {
+       "title": {
+        "en": "3 · Al-Fatiha and a Surah",
+        "ur": "3 · فاتحہ اور سورت"
+       },
+       "body": {
+        "en": "Say “A'udhu billahi minash-shaitanir-rajim” and “Bismillah”, recite Surah Al-Fatiha, say “Ameen”, then recite another surah or verses (in the first two rak'ahs).",
+        "ur": "“اعوذ باللہ من الشیطان الرجیم” اور “بسم اللہ” پڑھیں، سورۃ الفاتحہ پڑھیں، “آمین” کہیں، پھر (پہلی دو رکعتوں میں) کوئی اور سورت یا آیات پڑھیں۔"
+       }
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Salah begins with…",
+        "ur": "نماز کس سے شروع ہوتی ہے؟"
+       },
+       "options": [
+        "Allahu Akbar",
+        "As-salamu alaikum",
+        "Ameen"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which surah is recited in every rak'ah?",
+        "ur": "کون سی سورت ہر رکعت میں پڑھی جاتی ہے؟"
+       },
+       "options": [
+        "Al-Fatiha",
+        "Al-Kahf",
+        "Yasin"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "This is the opening praise called…",
+        "ur": "یہ ابتدائی حمد کیا کہلاتی ہے؟"
+       },
+       "options": [
+        {
+         "en": "Thana",
+         "ur": "ثنا"
+        },
+        {
+         "en": "Tashahhud",
+         "ur": "تشہد"
+        },
+        {
+         "en": "Durood",
+         "ur": "درود"
+        }
+       ],
+       "answer": 0,
+       "arabic": "سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالٰى جَدُّكَ وَلَا إِلٰهَ غَيْرُكَ"
+      },
+      {
+       "prompt": {
+        "en": "What is said after Al-Fatiha?",
+        "ur": "سورۃ الفاتحہ کے بعد کیا کہا جاتا ہے؟"
+       },
+       "options": [
+        "Ameen",
+        "Bismillah",
+        "Subhanallah"
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "salah_3",
+     "xp": 15,
+     "title": {
+      "en": "Ruku & Sujood",
+      "ur": "رکوع اور سجدہ",
+      "ar": "الركوع والسجود"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "4 · Ruku (bowing)",
+        "ur": "4 · رکوع"
+       },
+       "body": {
+        "en": "Say “Allahu Akbar” and bow, hands on the knees and back straight. Say three times: “Glory be to my Lord, the Most Great.”",
+        "ur": "“اللہ اکبر” کہہ کر رکوع کریں، ہاتھ گھٹنوں پر اور کمر سیدھی۔ تین بار کہیں: “پاک ہے میرا رب جو عظمت والا ہے۔”"
+       },
+       "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيْمِ",
+       "translit": "Subhana Rabbiyal 'Azeem",
+       "ref": "Abu Dawud 871",
+       "audio": "assets/audio/phrases/ruku.mp3"
+      },
+      {
+       "title": {
+        "en": "5 · Standing up",
+        "ur": "5 · قومہ"
+       },
+       "body": {
+        "en": "Rise saying “Allah hears the one who praises Him”, and once upright: “Our Lord, and to You is all praise.”",
+        "ur": "اٹھتے ہوئے کہیں: “اللہ نے اس کی سن لی جس نے اس کی تعریف کی”، اور سیدھے کھڑے ہو کر: “اے ہمارے رب! تیرے ہی لیے سب تعریف ہے۔”"
+       },
+       "arabic": "سَمِعَ اللّٰهُ لِمَنْ حَمِدَهٗ · رَبَّنَا وَلَكَ الْحَمْدُ",
+       "translit": "Sami'allahu liman hamidah · Rabbana wa lakal hamd",
+       "ref": "Bukhari 732",
+       "audio": "assets/audio/phrases/qawmah.mp3"
+      },
+      {
+       "title": {
+        "en": "6 · Sujood (prostration)",
+        "ur": "6 · سجدہ"
+       },
+       "body": {
+        "en": "Say “Allahu Akbar” and prostrate on seven parts: forehead with nose, both hands, both knees and the toes of both feet. Say three times: “Glory be to my Lord, the Most High.” Sit briefly, then make a second sujood.",
+        "ur": "“اللہ اکبر” کہہ کر سات اعضاء پر سجدہ کریں: پیشانی اور ناک، دونوں ہاتھ، دونوں گھٹنے اور دونوں پاؤں کی انگلیاں۔ تین بار کہیں: “پاک ہے میرا رب جو سب سے بلند ہے۔” تھوڑا بیٹھ کر دوسرا سجدہ کریں۔"
+       },
+       "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلٰى",
+       "translit": "Subhana Rabbiyal A'la",
+       "ref": "Bukhari 812 · Abu Dawud 871",
+       "audio": "assets/audio/phrases/sujood.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "What is said in ruku?",
+        "ur": "رکوع میں کیا پڑھا جاتا ہے؟"
+       },
+       "options": [
+        "Subhana Rabbiyal 'Azeem",
+        "Subhana Rabbiyal A'la",
+        "Rabbana lakal hamd"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is said in sujood?",
+        "ur": "سجدے میں کیا پڑھا جاتا ہے؟"
+       },
+       "options": [
+        "Subhana Rabbiyal A'la",
+        "Subhana Rabbiyal 'Azeem",
+        "Allahu Akbar"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "How many sujood are in each rak'ah?",
+        "ur": "ہر رکعت میں کتنے سجدے ہیں؟"
+       },
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "How many body parts touch the ground in sujood?",
+        "ur": "سجدے میں کتنے اعضاء زمین پر لگتے ہیں؟"
+       },
+       "options": [
+        "5",
+        "7",
+        "9"
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "id": "salah_4",
+     "xp": 15,
+     "title": {
+      "en": "Tashahhud, Durood & Salam",
+      "ur": "تشہد، درود اور سلام",
+      "ar": "التشهد والصلاة الإبراهيمية والتسليم"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "7 · Tashahhud",
+        "ur": "7 · تشہد"
+       },
+       "body": {
+        "en": "Sit after the second rak'ah and in the final rak'ah, and recite: “All greetings, prayers and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and on the righteous servants of Allah. I bear witness that there is no god but Allah, and that Muhammad is His servant and Messenger.”",
+        "ur": "دوسری رکعت کے بعد اور آخری رکعت میں بیٹھ کر پڑھیں: “تمام زبانی، بدنی اور مالی عبادتیں اللہ کے لیے ہیں۔ اے نبی! آپ پر سلام اور اللہ کی رحمت اور برکتیں ہوں۔ ہم پر اور اللہ کے نیک بندوں پر سلام ہو۔ میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں اور محمد ﷺ اس کے بندے اور رسول ہیں۔”"
+       },
+       "arabic": "اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهٗ، اَلسَّلَامُ عَلَيْنَا وَعَلٰى عِبَادِ اللّٰهِ الصَّالِحِيْنَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهٗ وَرَسُوْلُهٗ",
+       "translit": "At-tahiyyatu lillahi was-salawatu wat-tayyibat…",
+       "ref": "Bukhari 831",
+       "audio": "assets/audio/phrases/tashahhud.mp3"
+      },
+      {
+       "title": {
+        "en": "8 · Durood Ibrahim",
+        "ur": "8 · درود ابراہیمی"
+       },
+       "body": {
+        "en": "In the final sitting, send blessings on the Prophet ﷺ: “O Allah, send prayers on Muhammad and the family of Muhammad, as You sent prayers on Ibrahim and the family of Ibrahim… and bless Muhammad… You are Praiseworthy, Glorious.”",
+        "ur": "آخری قعدہ میں نبی ﷺ پر درود بھیجیں: “اے اللہ! محمد اور آلِ محمد پر رحمت نازل فرما جیسے تو نے ابراہیم اور آلِ ابراہیم پر نازل فرمائی… اور محمد پر برکت نازل فرما… بے شک تو تعریف والا، بزرگی والا ہے۔”"
+       },
+       "arabic": "اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ وَعَلٰى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلٰى إِبْرَاهِيْمَ وَعَلٰى آلِ إِبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ، اَللّٰهُمَّ بَارِكْ عَلٰى مُحَمَّدٍ وَعَلٰى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلٰى إِبْرَاهِيْمَ وَعَلٰى آلِ إِبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ",
+       "translit": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammad…",
+       "ref": "Bukhari 3370",
+       "audio": "assets/audio/phrases/durood.mp3"
+      },
+      {
+       "title": {
+        "en": "9 · Salam",
+        "ur": "9 · سلام"
+       },
+       "body": {
+        "en": "End the prayer by turning the head to the right, then to the left, saying each time: “Peace and the mercy of Allah be upon you.”",
+        "ur": "نماز ختم کرنے کے لیے پہلے دائیں، پھر بائیں طرف منہ پھیر کر ہر بار کہیں: “تم پر سلامتی اور اللہ کی رحمت ہو۔”"
+       },
+       "arabic": "اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ",
+       "translit": "As-salamu 'alaikum wa rahmatullah",
+       "ref": "Abu Dawud 996"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "What is this recitation called?",
+        "ur": "اس دعا کا کیا نام ہے؟"
+       },
+       "options": [
+        {
+         "en": "Tashahhud",
+         "ur": "تشہد"
+        },
+        {
+         "en": "Thana",
+         "ur": "ثنا"
+        },
+        {
+         "en": "Qunut",
+         "ur": "قنوت"
+        }
+       ],
+       "answer": 0,
+       "arabic": "اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ"
+      },
+      {
+       "prompt": {
+        "en": "Durood Ibrahim is recited in…",
+        "ur": "درود ابراہیمی کب پڑھا جاتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "the final sitting",
+         "ur": "آخری قعدہ میں"
+        },
+        {
+         "en": "ruku",
+         "ur": "رکوع میں"
+        },
+        {
+         "en": "the first standing",
+         "ur": "پہلے قیام میں"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Salam is given first to the…",
+        "ur": "سلام پہلے کس طرف پھیرا جاتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "right",
+         "ur": "دائیں"
+        },
+        {
+         "en": "left",
+         "ur": "بائیں"
+        },
+        {
+         "en": "front",
+         "ur": "سامنے"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "How does salah end?",
+        "ur": "نماز کس پر ختم ہوتی ہے؟"
+       },
+       "options": [
+        "As-salamu 'alaikum wa rahmatullah",
+        "Allahu Akbar",
+        "Ameen"
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "qaida",
+   "icon": "qaida",
+   "kids": true,
+   "title": {
+    "en": "Noorani Qaida",
+    "ur": "نورانی قاعدہ",
+    "ar": "القاعدة النورانية"
+   },
+   "tag": {
+    "en": "Arabic letters",
+    "ur": "عربی حروف",
+    "ar": "الحروف العربية"
+   },
+   "lessons": [
+    {
+     "id": "qaida_1",
+     "xp": 15,
+     "title": {
+      "en": "Letters: Alif to Khaa",
+      "ur": "حروف: الف سے خا",
+      "ar": "الحروف 1"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Alif",
+        "ur": "Alif"
+       },
+       "body": {
+        "en": "Makhraj: the empty space of the mouth and throat.",
+        "ur": "مخرج: منہ اور حلق کا خالی حصہ (جوف)۔"
+       },
+       "audio": "assets/audio/letters/letter_01.mp3",
+       "arabic": "ا",
+       "translit": "Alif"
+      },
+      {
+       "title": {
+        "en": "Baa",
+        "ur": "Baa"
+       },
+       "body": {
+        "en": "Makhraj: the wet inner part of both lips.",
+        "ur": "مخرج: دونوں ہونٹوں کا تر حصہ۔"
+       },
+       "audio": "assets/audio/letters/letter_02.mp3",
+       "arabic": "ب",
+       "translit": "Baa"
+      },
+      {
+       "title": {
+        "en": "Taa",
+        "ur": "Taa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the roots of the upper front teeth.",
+        "ur": "مخرج: زبان کی نوک اوپر کے سامنے کے دانتوں کی جڑ سے۔"
+       },
+       "audio": "assets/audio/letters/letter_03.mp3",
+       "arabic": "ت",
+       "translit": "Taa"
+      },
+      {
+       "title": {
+        "en": "Thaa",
+        "ur": "Thaa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the edges of the upper front teeth.",
+        "ur": "مخرج: زبان کی نوک اوپر کے سامنے کے دانتوں کے کنارے سے۔"
+       },
+       "audio": "assets/audio/letters/letter_04.mp3",
+       "arabic": "ث",
+       "translit": "Thaa"
+      },
+      {
+       "title": {
+        "en": "Jeem",
+        "ur": "Jeem"
+       },
+       "body": {
+        "en": "Makhraj: middle of the tongue against the roof of the mouth.",
+        "ur": "مخرج: زبان کا درمیانی حصہ تالو سے۔"
+       },
+       "audio": "assets/audio/letters/letter_05.mp3",
+       "arabic": "ج",
+       "translit": "Jeem"
+      },
+      {
+       "title": {
+        "en": "Haa",
+        "ur": "Haa"
+       },
+       "body": {
+        "en": "Makhraj: the middle of the throat.",
+        "ur": "مخرج: حلق کا درمیانی حصہ۔"
+       },
+       "audio": "assets/audio/letters/letter_06.mp3",
+       "arabic": "ح",
+       "translit": "Haa"
+      },
+      {
+       "title": {
+        "en": "Khaa",
+        "ur": "Khaa"
+       },
+       "body": {
+        "en": "Makhraj: the top of the throat, nearest the mouth.",
+        "ur": "مخرج: حلق کا اوپر والا حصہ (منہ کے قریب)۔"
+       },
+       "audio": "assets/audio/letters/letter_07.mp3",
+       "arabic": "خ",
+       "translit": "Khaa"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which letter is Alif?",
+        "ur": "Alif کون سا حرف ہے؟"
+       },
+       "options": [
+        "ا",
+        "ب",
+        "ج"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Khaa",
+        "Baa",
+        "Thaa"
+       ],
+       "answer": 1,
+       "arabic": "ب"
+      },
+      {
+       "prompt": {
+        "en": "Which letter is Taa?",
+        "ur": "Taa کون سا حرف ہے؟"
+       },
+       "options": [
+        "ح",
+        "ت",
+        "ب"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Jeem",
+        "Thaa",
+        "Alif"
+       ],
+       "answer": 1,
+       "arabic": "ث"
+      },
+      {
+       "prompt": {
+        "en": "Where is Alif pronounced from?",
+        "ur": "Alif کہاں سے ادا ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "the wet inner part of both lips",
+         "ur": "دونوں ہونٹوں کا تر حصہ"
+        },
+        {
+         "en": "the empty space of the mouth and throat",
+         "ur": "منہ اور حلق کا خالی حصہ (جوف)"
+        }
+       ],
+       "answer": 1,
+       "arabic": "ا"
+      }
+     ]
+    },
+    {
+     "id": "qaida_2",
+     "xp": 15,
+     "title": {
+      "en": "Letters: Daal to Saad",
+      "ur": "حروف: دال سے صاد",
+      "ar": "الحروف 2"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Daal",
+        "ur": "Daal"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the roots of the upper front teeth.",
+        "ur": "مخرج: زبان کی نوک اوپر کے سامنے کے دانتوں کی جڑ سے۔"
+       },
+       "audio": "assets/audio/letters/letter_08.mp3",
+       "arabic": "د",
+       "translit": "Daal"
+      },
+      {
+       "title": {
+        "en": "Dhaal",
+        "ur": "Dhaal"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the edges of the upper front teeth.",
+        "ur": "مخرج: زبان کی نوک اوپر کے سامنے کے دانتوں کے کنارے سے۔"
+       },
+       "audio": "assets/audio/letters/letter_09.mp3",
+       "arabic": "ذ",
+       "translit": "Dhaal"
+      },
+      {
+       "title": {
+        "en": "Raa",
+        "ur": "Raa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue, slightly back, against the upper gums.",
+        "ur": "مخرج: زبان کی نوک کا پچھلا حصہ اوپر کے مسوڑھوں سے۔"
+       },
+       "audio": "assets/audio/letters/letter_10.mp3",
+       "arabic": "ر",
+       "translit": "Raa"
+      },
+      {
+       "title": {
+        "en": "Zaa",
+        "ur": "Zaa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue near the lower front teeth (a whistling sound).",
+        "ur": "مخرج: زبان کی نوک نیچے کے سامنے کے دانتوں کے قریب (سیٹی جیسی آواز)۔"
+       },
+       "audio": "assets/audio/letters/letter_11.mp3",
+       "arabic": "ز",
+       "translit": "Zaa"
+      },
+      {
+       "title": {
+        "en": "Seen",
+        "ur": "Seen"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue near the lower front teeth (a whistling sound).",
+        "ur": "مخرج: زبان کی نوک نیچے کے سامنے کے دانتوں کے قریب (سیٹی جیسی آواز)۔"
+       },
+       "audio": "assets/audio/letters/letter_12.mp3",
+       "arabic": "س",
+       "translit": "Seen"
+      },
+      {
+       "title": {
+        "en": "Sheen",
+        "ur": "Sheen"
+       },
+       "body": {
+        "en": "Makhraj: middle of the tongue against the roof of the mouth.",
+        "ur": "مخرج: زبان کا درمیانی حصہ تالو سے۔"
+       },
+       "audio": "assets/audio/letters/letter_13.mp3",
+       "arabic": "ش",
+       "translit": "Sheen"
+      },
+      {
+       "title": {
+        "en": "Saad",
+        "ur": "Saad"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue near the lower front teeth, heavy.",
+        "ur": "مخرج: زبان کی نوک نیچے کے دانتوں کے قریب، پُر (موٹی) آواز۔"
+       },
+       "audio": "assets/audio/letters/letter_14.mp3",
+       "arabic": "ص",
+       "translit": "Saad"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which letter is Daal?",
+        "ur": "Daal کون سا حرف ہے؟"
+       },
+       "options": [
+        "د",
+        "ذ",
+        "س"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Saad",
+        "Dhaal",
+        "Zaa"
+       ],
+       "answer": 1,
+       "arabic": "ذ"
+      },
+      {
+       "prompt": {
+        "en": "Which letter is Raa?",
+        "ur": "Raa کون سا حرف ہے؟"
+       },
+       "options": [
+        "ش",
+        "ر",
+        "ذ"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Seen",
+        "Zaa",
+        "Daal"
+       ],
+       "answer": 1,
+       "arabic": "ز"
+      },
+      {
+       "prompt": {
+        "en": "Where is Daal pronounced from?",
+        "ur": "Daal کہاں سے ادا ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "tip of the tongue at the edges of the upper front teeth",
+         "ur": "زبان کی نوک اوپر کے سامنے کے دانتوں کے کنارے سے"
+        },
+        {
+         "en": "tip of the tongue at the roots of the upper front teeth",
+         "ur": "زبان کی نوک اوپر کے سامنے کے دانتوں کی جڑ سے"
+        }
+       ],
+       "answer": 1,
+       "arabic": "د"
+      }
+     ]
+    },
+    {
+     "id": "qaida_3",
+     "xp": 15,
+     "title": {
+      "en": "Letters: Daad to Qaaf",
+      "ur": "حروف: ضاد سے قاف",
+      "ar": "الحروف 3"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Daad",
+        "ur": "Daad"
+       },
+       "body": {
+        "en": "Makhraj: side of the tongue against the upper molars.",
+        "ur": "مخرج: زبان کی کروٹ اوپر کی داڑھوں سے۔"
+       },
+       "audio": "assets/audio/letters/letter_15.mp3",
+       "arabic": "ض",
+       "translit": "Daad"
+      },
+      {
+       "title": {
+        "en": "Ṭaa",
+        "ur": "Ṭaa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the roots of the upper front teeth, heavy.",
+        "ur": "مخرج: زبان کی نوک اوپر کے دانتوں کی جڑ سے، پُر آواز۔"
+       },
+       "audio": "assets/audio/letters/letter_16.mp3",
+       "arabic": "ط",
+       "translit": "Ṭaa"
+      },
+      {
+       "title": {
+        "en": "Ẓaa",
+        "ur": "Ẓaa"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the edges of the upper front teeth, heavy.",
+        "ur": "مخرج: زبان کی نوک اوپر کے دانتوں کے کنارے سے، پُر آواز۔"
+       },
+       "audio": "assets/audio/letters/letter_17.mp3",
+       "arabic": "ظ",
+       "translit": "Ẓaa"
+      },
+      {
+       "title": {
+        "en": "'Ain",
+        "ur": "'Ain"
+       },
+       "body": {
+        "en": "Makhraj: the middle of the throat.",
+        "ur": "مخرج: حلق کا درمیانی حصہ۔"
+       },
+       "audio": "assets/audio/letters/letter_18.mp3",
+       "arabic": "ع",
+       "translit": "'Ain"
+      },
+      {
+       "title": {
+        "en": "Ghain",
+        "ur": "Ghain"
+       },
+       "body": {
+        "en": "Makhraj: the top of the throat, nearest the mouth.",
+        "ur": "مخرج: حلق کا اوپر والا حصہ۔"
+       },
+       "audio": "assets/audio/letters/letter_19.mp3",
+       "arabic": "غ",
+       "translit": "Ghain"
+      },
+      {
+       "title": {
+        "en": "Faa",
+        "ur": "Faa"
+       },
+       "body": {
+        "en": "Makhraj: inside of the lower lip against the upper front teeth.",
+        "ur": "مخرج: نچلے ہونٹ کا اندرونی حصہ اوپر کے دانتوں کے کنارے سے۔"
+       },
+       "audio": "assets/audio/letters/letter_20.mp3",
+       "arabic": "ف",
+       "translit": "Faa"
+      },
+      {
+       "title": {
+        "en": "Qaaf",
+        "ur": "Qaaf"
+       },
+       "body": {
+        "en": "Makhraj: the back of the tongue against the soft palate.",
+        "ur": "مخرج: زبان کی جڑ نرم تالو سے۔"
+       },
+       "audio": "assets/audio/letters/letter_21.mp3",
+       "arabic": "ق",
+       "translit": "Qaaf"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which letter is Daad?",
+        "ur": "Daad کون سا حرف ہے؟"
+       },
+       "options": [
+        "ض",
+        "ط",
+        "غ"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Qaaf",
+        "Ṭaa",
+        "'Ain"
+       ],
+       "answer": 1,
+       "arabic": "ط"
+      },
+      {
+       "prompt": {
+        "en": "Which letter is Ẓaa?",
+        "ur": "Ẓaa کون سا حرف ہے؟"
+       },
+       "options": [
+        "ف",
+        "ظ",
+        "ط"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Ghain",
+        "'Ain",
+        "Daad"
+       ],
+       "answer": 1,
+       "arabic": "ع"
+      },
+      {
+       "prompt": {
+        "en": "Where is Daad pronounced from?",
+        "ur": "Daad کہاں سے ادا ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "tip of the tongue at the roots of the upper front teeth, heavy",
+         "ur": "زبان کی نوک اوپر کے دانتوں کی جڑ سے، پُر آواز"
+        },
+        {
+         "en": "side of the tongue against the upper molars",
+         "ur": "زبان کی کروٹ اوپر کی داڑھوں سے"
+        }
+       ],
+       "answer": 1,
+       "arabic": "ض"
+      }
+     ]
+    },
+    {
+     "id": "qaida_4",
+     "xp": 15,
+     "title": {
+      "en": "Letters: Kaaf to Yaa",
+      "ur": "حروف: کاف سے یا",
+      "ar": "الحروف 4"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Kaaf",
+        "ur": "Kaaf"
+       },
+       "body": {
+        "en": "Makhraj: the back of the tongue, a little forward of Qaaf.",
+        "ur": "مخرج: زبان کی جڑ، قاف سے ذرا آگے۔"
+       },
+       "audio": "assets/audio/letters/letter_22.mp3",
+       "arabic": "ك",
+       "translit": "Kaaf"
+      },
+      {
+       "title": {
+        "en": "Laam",
+        "ur": "Laam"
+       },
+       "body": {
+        "en": "Makhraj: the edge of the tongue's tip against the upper gums.",
+        "ur": "مخرج: زبان کی نوک کا کنارہ اوپر کے مسوڑھوں سے۔"
+       },
+       "audio": "assets/audio/letters/letter_23.mp3",
+       "arabic": "ل",
+       "translit": "Laam"
+      },
+      {
+       "title": {
+        "en": "Meem",
+        "ur": "Meem"
+       },
+       "body": {
+        "en": "Makhraj: the dry outer part of both lips, closed.",
+        "ur": "مخرج: دونوں ہونٹوں کا خشک حصہ، بند کر کے۔"
+       },
+       "audio": "assets/audio/letters/letter_24.mp3",
+       "arabic": "م",
+       "translit": "Meem"
+      },
+      {
+       "title": {
+        "en": "Noon",
+        "ur": "Noon"
+       },
+       "body": {
+        "en": "Makhraj: tip of the tongue at the upper gums, with a nasal sound.",
+        "ur": "مخرج: زبان کی نوک اوپر کے مسوڑھوں سے، ناک کی آواز (غنہ) کے ساتھ۔"
+       },
+       "audio": "assets/audio/letters/letter_25.mp3",
+       "arabic": "ن",
+       "translit": "Noon"
+      },
+      {
+       "title": {
+        "en": "Waw",
+        "ur": "Waw"
+       },
+       "body": {
+        "en": "Makhraj: both lips rounded, not closed.",
+        "ur": "مخرج: دونوں ہونٹ گول کر کے، بند کیے بغیر۔"
+       },
+       "audio": "assets/audio/letters/letter_26.mp3",
+       "arabic": "و",
+       "translit": "Waw"
+      },
+      {
+       "title": {
+        "en": "Haa (soft)",
+        "ur": "Haa (soft)"
+       },
+       "body": {
+        "en": "Makhraj: the deepest part of the throat.",
+        "ur": "مخرج: حلق کا سب سے نچلا حصہ۔"
+       },
+       "audio": "assets/audio/letters/letter_27.mp3",
+       "arabic": "ه",
+       "translit": "Haa (soft)"
+      },
+      {
+       "title": {
+        "en": "Yaa",
+        "ur": "Yaa"
+       },
+       "body": {
+        "en": "Makhraj: middle of the tongue against the roof of the mouth.",
+        "ur": "مخرج: زبان کا درمیانی حصہ تالو سے۔"
+       },
+       "audio": "assets/audio/letters/letter_28.mp3",
+       "arabic": "ي",
+       "translit": "Yaa"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "Which letter is Kaaf?",
+        "ur": "Kaaf کون سا حرف ہے؟"
+       },
+       "options": [
+        "ك",
+        "ل",
+        "و"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Yaa",
+        "Laam",
+        "Noon"
+       ],
+       "answer": 1,
+       "arabic": "ل"
+      },
+      {
+       "prompt": {
+        "en": "Which letter is Meem?",
+        "ur": "Meem کون سا حرف ہے؟"
+       },
+       "options": [
+        "ه",
+        "م",
+        "ل"
+       ],
+       "answer": 1
+      },
+      {
+       "prompt": {
+        "en": "What is this letter called?",
+        "ur": "اس حرف کا نام کیا ہے؟"
+       },
+       "options": [
+        "Waw",
+        "Noon",
+        "Kaaf"
+       ],
+       "answer": 1,
+       "arabic": "ن"
+      },
+      {
+       "prompt": {
+        "en": "Where is Kaaf pronounced from?",
+        "ur": "Kaaf کہاں سے ادا ہوتا ہے؟"
+       },
+       "options": [
+        {
+         "en": "the edge of the tongue's tip against the upper gums",
+         "ur": "زبان کی نوک کا کنارہ اوپر کے مسوڑھوں سے"
+        },
+        {
+         "en": "the back of the tongue, a little forward of Qaaf",
+         "ur": "زبان کی جڑ، قاف سے ذرا آگے"
+        }
+       ],
+       "answer": 1,
+       "arabic": "ك"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "duas",
+   "icon": "duas",
+   "kids": true,
+   "title": {
+    "en": "Daily Essential Duas",
+    "ur": "روزمرہ کی ضروری دعائیں",
+    "ar": "أدعية يومية"
+   },
+   "tag": {
+    "en": "Sunnah of every day",
+    "ur": "روز کی سنتیں",
+    "ar": "سنن يومية"
+   },
+   "lessons": [
+    {
+     "id": "duas_1",
+     "xp": 15,
+     "title": {
+      "en": "Sleeping & Waking",
+      "ur": "سونا اور جاگنا",
+      "ar": "النوم والاستيقاظ"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Before sleeping",
+        "ur": "سونے سے پہلے"
+       },
+       "body": {
+        "en": "“In Your name, O Allah, I die and I live.”",
+        "ur": "“اے اللہ! تیرے ہی نام سے میں مرتا اور جیتا ہوں۔”"
+       },
+       "arabic": "بِاسْمِكَ اللّٰهُمَّ أَمُوْتُ وَأَحْيَا",
+       "translit": "Bismika Allahumma amutu wa ahya",
+       "ref": "Bukhari 6324",
+       "audio": "assets/audio/phrases/dua_sleep.mp3"
+      },
+      {
+       "title": {
+        "en": "On waking up",
+        "ur": "جاگنے پر"
+       },
+       "body": {
+        "en": "“All praise is for Allah, who gave us life after causing us to die, and to Him is the return.”",
+        "ur": "“سب تعریف اللہ کے لیے ہے جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف لوٹ کر جانا ہے۔”"
+       },
+       "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ",
+       "translit": "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilaihin-nushur",
+       "ref": "Bukhari 6324",
+       "audio": "assets/audio/phrases/dua_wake.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "When is this dua said?",
+        "ur": "یہ دعا کب پڑھی جاتی ہے؟"
+       },
+       "options": [
+        {
+         "en": "Before sleeping",
+         "ur": "سونے سے پہلے"
+        },
+        {
+         "en": "Before eating",
+         "ur": "کھانے سے پہلے"
+        },
+        {
+         "en": "Entering the mosque",
+         "ur": "مسجد میں داخل ہوتے وقت"
+        }
+       ],
+       "answer": 0,
+       "arabic": "بِاسْمِكَ اللّٰهُمَّ أَمُوْتُ وَأَحْيَا"
+      },
+      {
+       "prompt": {
+        "en": "The waking dua begins with…",
+        "ur": "جاگنے کی دعا کس سے شروع ہوتی ہے؟"
+       },
+       "options": [
+        "Alhamdu lillah",
+        "Bismillah",
+        "Astaghfirullah"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "“Amutu wa ahya” means…",
+        "ur": "“اموت و احیا” کا مطلب ہے…"
+       },
+       "options": [
+        {
+         "en": "I die and I live",
+         "ur": "میں مرتا اور جیتا ہوں"
+        },
+        {
+         "en": "I eat and drink",
+         "ur": "میں کھاتا اور پیتا ہوں"
+        },
+        {
+         "en": "I come and go",
+         "ur": "میں آتا اور جاتا ہوں"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Where are both duas narrated?",
+        "ur": "یہ دونوں دعائیں کہاں روایت ہیں؟"
+       },
+       "options": [
+        "Sahih al-Bukhari",
+        "Muwatta Malik",
+        "Sunan an-Nasa'i"
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "id": "duas_2",
+     "xp": 15,
+     "title": {
+      "en": "Eating & Drinking",
+      "ur": "کھانا اور پینا",
+      "ar": "الطعام والشراب"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Before eating",
+        "ur": "کھانے سے پہلے"
+       },
+       "body": {
+        "en": "Say “Bismillah” and eat with the right hand from what is in front of you.",
+        "ur": "“بسم اللہ” کہیں اور دائیں ہاتھ سے اپنے سامنے سے کھائیں۔"
+       },
+       "arabic": "بِسْمِ اللّٰهِ",
+       "translit": "Bismillah",
+       "ref": "Bukhari 5376",
+       "audio": "assets/audio/phrases/bismillah.mp3"
+      },
+      {
+       "title": {
+        "en": "If you forgot",
+        "ur": "اگر بھول جائیں"
+       },
+       "body": {
+        "en": "“In the name of Allah, at its beginning and at its end.”",
+        "ur": "“اللہ کے نام سے، اس کے شروع میں بھی اور آخر میں بھی۔”"
+       },
+       "arabic": "بِسْمِ اللّٰهِ أَوَّلَهٗ وَآخِرَهٗ",
+       "translit": "Bismillahi awwalahu wa akhirahu",
+       "ref": "Abu Dawud 3767 · Tirmidhi 1858"
+      },
+      {
+       "title": {
+        "en": "After eating",
+        "ur": "کھانے کے بعد"
+       },
+       "body": {
+        "en": "“All praise is for Allah who fed me this and provided it for me without any power or strength from me.”",
+        "ur": "“سب تعریف اللہ کے لیے ہے جس نے مجھے یہ کھلایا اور میری کسی طاقت و قوت کے بغیر مجھے یہ عطا کیا۔”"
+       },
+       "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَطْعَمَنِيْ هٰذَا وَرَزَقَنِيْهِ مِنْ غَيْرِ حَوْلٍ مِّنِّيْ وَلَا قُوَّةٍ",
+       "translit": "Alhamdu lillahil-ladhi at'amani hadha wa razaqanihi min ghairi hawlin minni wa la quwwah",
+       "ref": "Abu Dawud 4023 · Tirmidhi 3458",
+       "audio": "assets/audio/phrases/dua_after_eating.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "What do we say before eating?",
+        "ur": "کھانے سے پہلے کیا کہتے ہیں؟"
+       },
+       "options": [
+        "Bismillah",
+        "Alhamdulillah",
+        "SubhanAllah"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "If you forgot Bismillah at the start, say…",
+        "ur": "اگر شروع میں بسم اللہ بھول جائیں تو کہیں…"
+       },
+       "options": [
+        "Bismillahi awwalahu wa akhirahu",
+        "Allahu Akbar",
+        "Ameen"
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which hand do we eat with?",
+        "ur": "ہم کس ہاتھ سے کھاتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "Right",
+         "ur": "دایاں"
+        },
+        {
+         "en": "Left",
+         "ur": "بایاں"
+        },
+        {
+         "en": "Either",
+         "ur": "کوئی بھی"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "When is this dua said?",
+        "ur": "یہ دعا کب پڑھی جاتی ہے؟"
+       },
+       "options": [
+        {
+         "en": "After eating",
+         "ur": "کھانے کے بعد"
+        },
+        {
+         "en": "Before sleeping",
+         "ur": "سونے سے پہلے"
+        },
+        {
+         "en": "Leaving home",
+         "ur": "گھر سے نکلتے وقت"
+        }
+       ],
+       "answer": 0,
+       "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَطْعَمَنِيْ هٰذَا"
+      }
+     ]
+    },
+    {
+     "id": "duas_3",
+     "xp": 15,
+     "title": {
+      "en": "Home & Masjid",
+      "ur": "گھر اور مسجد",
+      "ar": "البيت والمسجد"
+     },
+     "cards": [
+      {
+       "title": {
+        "en": "Leaving home",
+        "ur": "گھر سے نکلتے وقت"
+       },
+       "body": {
+        "en": "“In the name of Allah, I place my trust in Allah; there is no power and no strength except with Allah.”",
+        "ur": "“اللہ کے نام سے، میں نے اللہ پر بھروسہ کیا، طاقت اور قوت صرف اللہ ہی کی طرف سے ہے۔”"
+       },
+       "arabic": "بِسْمِ اللّٰهِ تَوَكَّلْتُ عَلَى اللّٰهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ",
+       "translit": "Bismillahi tawakkaltu 'alallahi la hawla wa la quwwata illa billah",
+       "ref": "Abu Dawud 5095",
+       "audio": "assets/audio/phrases/dua_leaving_home.mp3"
+      },
+      {
+       "title": {
+        "en": "Entering the masjid",
+        "ur": "مسجد میں داخل ہوتے وقت"
+       },
+       "body": {
+        "en": "Enter with the right foot and say: “O Allah, open for me the doors of Your mercy.”",
+        "ur": "دایاں پاؤں پہلے رکھیں اور کہیں: “اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔”"
+       },
+       "arabic": "اَللّٰهُمَّ افْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ",
+       "translit": "Allahummaf-tah li abwaba rahmatik",
+       "ref": "Muslim 713",
+       "audio": "assets/audio/phrases/dua_enter_masjid.mp3"
+      },
+      {
+       "title": {
+        "en": "Leaving the masjid",
+        "ur": "مسجد سے نکلتے وقت"
+       },
+       "body": {
+        "en": "Leave with the left foot and say: “O Allah, I ask You of Your bounty.”",
+        "ur": "بایاں پاؤں پہلے نکالیں اور کہیں: “اے اللہ! میں تجھ سے تیرا فضل مانگتا ہوں۔”"
+       },
+       "arabic": "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ فَضْلِكَ",
+       "translit": "Allahumma inni as'aluka min fadlik",
+       "ref": "Muslim 713",
+       "audio": "assets/audio/phrases/dua_leave_masjid.mp3"
+      }
+     ],
+     "questions": [
+      {
+       "prompt": {
+        "en": "“Tawakkaltu 'alallah” means…",
+        "ur": "“توکلت علی اللہ” کا مطلب ہے…"
+       },
+       "options": [
+        {
+         "en": "I place my trust in Allah",
+         "ur": "میں نے اللہ پر بھروسہ کیا"
+        },
+        {
+         "en": "I seek forgiveness",
+         "ur": "میں معافی مانگتا ہوں"
+        },
+        {
+         "en": "Allah is the Greatest",
+         "ur": "اللہ سب سے بڑا ہے"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "Which foot enters the masjid first?",
+        "ur": "مسجد میں پہلے کون سا پاؤں رکھتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "Right",
+         "ur": "دایاں"
+        },
+        {
+         "en": "Left",
+         "ur": "بایاں"
+        },
+        {
+         "en": "Either",
+         "ur": "کوئی بھی"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "prompt": {
+        "en": "When entering the masjid we ask for Allah's…",
+        "ur": "مسجد میں داخل ہوتے وقت ہم اللہ سے کیا مانگتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "mercy",
+         "ur": "رحمت"
+        },
+        {
+         "en": "bounty",
+         "ur": "فضل"
+        },
+        {
+         "en": "forgiveness",
+         "ur": "مغفرت"
+        }
+       ],
+       "answer": 0,
+       "arabic": "اَللّٰهُمَّ افْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ"
+      },
+      {
+       "prompt": {
+        "en": "When leaving the masjid we ask for Allah's…",
+        "ur": "مسجد سے نکلتے وقت ہم اللہ سے کیا مانگتے ہیں؟"
+       },
+       "options": [
+        {
+         "en": "bounty",
+         "ur": "فضل"
+        },
+        {
+         "en": "mercy",
+         "ur": "رحمت"
+        },
+        {
+         "en": "protection",
+         "ur": "حفاظت"
+        }
+       ],
+       "answer": 0,
+       "arabic": "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ فَضْلِكَ"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

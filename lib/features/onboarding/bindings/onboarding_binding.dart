@@ -3,6 +3,8 @@ import 'package:quran_pro/features/onboarding/viewmodels/onboarding_view_model.d
 
 final class OnboardingBinding extends Bindings {
   @override
-  void dependencies() =>
-      Get.lazyPut(() => OnboardingViewModel(Get.find(), Get.find()), fenix: true);
+  void dependencies() => Get.lazyPut(
+    () => OnboardingViewModel(Get.find(), Get.find(), Get.find(), Get.find()),
+    fenix: true,
+  );
 }

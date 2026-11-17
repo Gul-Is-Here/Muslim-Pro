@@ -32,6 +32,7 @@ dependencies:
   adhan: 2.0.0+1
   geolocator: 14.1.2
   just_audio: 0.10.6
+  just_audio_background: 0.0.1-beta.17 # notification-bar and lock-screen controls
 
   # Notifications
   flutter_local_notifications: 23.0.1
@@ -40,6 +41,7 @@ dependencies:
 
   # Storage, network, utils
   get_storage: 2.1.1
+  path_provider: 2.1.6 # where downloaded recitations are kept
   flutter_secure_storage: 11.2.0
   connectivity_plus: 7.3.1
   equatable: 3.0.0
@@ -66,7 +68,10 @@ flutter:
     enable-swift-package-manager: true
   assets:
     - assets/data/    # quran.json, duas.json, names_of_allah.json (offline core content)
+    - assets/quran/   # one file per surah: Uthmani text + translations (docs/AUDIO_CREDITS.md)
     - assets/audio/   # in-app azan preview
+    - assets/audio/letters/   # Qaida letter names (sources: docs/AUDIO_CREDITS.md)
+    - assets/audio/phrases/   # Kalima, dua, salah and Ramadan recitations (docs/AUDIO_CREDITS.md)
   fonts:
     - family: Amiri
       fonts: [{ asset: assets/fonts/Amiri-Regular.ttf }]

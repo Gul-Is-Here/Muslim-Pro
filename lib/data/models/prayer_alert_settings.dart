@@ -3,12 +3,13 @@ import 'package:quran_pro/data/models/prayer.dart';
 
 /// Bundled Azan clips (see docs/AUDIO_CREDITS.md) plus the device's own notification sound.
 /// The enum name is persisted and is the native resource name (`azan_<name>`): never rename one.
+/// A removed value is safe: saved choices of it fall back to [fallback] when read.
 enum AzanSound {
-  tatarstan,
-  hamtramck,
+  makkah,
+  madinah,
   system;
 
-  static const AzanSound fallback = tatarstan;
+  static const AzanSound fallback = makkah;
 
   bool get isBundled => this != system;
   String get labelKey => 'azan_sound_$name';
@@ -19,14 +20,8 @@ enum AzanSound {
 
   /// Attribution shown in the app (CC BY requires it). Details: docs/AUDIO_CREDITS.md.
   String? get credit => switch (this) {
-    tatarstan =>
-      '“morning_azan.wav” by Jahffar, freesound.org/s/168775 — CC0 1.0. '
-          'Excerpt, mixed to mono, loudness-normalised.',
-    hamtramck =>
-      '“Islamic Call to Prayer (Dhuhr Adhan Audiophile Field Recording from Hamtramck, MI '
-          '96 kHz 24 Bit Stereo).wav” by RJStefanski, freesound.org/s/255231 — '
-          'CC BY 3.0 (creativecommons.org/licenses/by/3.0). Excerpt, mixed to mono, '
-          'loudness-normalised.',
+    makkah => 'Azan from Masjid al-Haram, Makkah. Excerpt, mixed to mono, loudness-normalised.',
+    madinah => 'Azan from Masjid an-Nabawi, Madinah. Excerpt, mixed to mono, loudness-normalised.',
     system => null,
   };
 }

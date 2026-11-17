@@ -13,6 +13,9 @@ final class NotificationService extends GetxService {
   static const _prayerPayload = 'prayer';
   static const _testId = 1; // prayer alert ids are day*10+prayer, far above this
 
+  /// Channels of sounds no longer bundled; removed so they stop showing in system settings.
+  static const _retiredChannels = ['prayer_tatarstan_v1', 'prayer_hamtramck_v1'];
+
   /// Android fixes a channel's sound once the channel exists on a device, so every sound has its
   /// own channel: changing a prayer's sound moves its alerts to another channel instead of
   /// editing one. Bump a suffix only when that clip's audio file itself changes.
@@ -43,6 +46,9 @@ final class NotificationService extends GetxService {
         ),
       ),
     );
+    for (final id in _retiredChannels) {
+      await _android?.deleteNotificationChannel(channelId: id);
+    }
     for (final s in AzanSound.values) {
       await _android?.createNotificationChannel(
         AndroidNotificationChannel(

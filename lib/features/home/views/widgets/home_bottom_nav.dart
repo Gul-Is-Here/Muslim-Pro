@@ -3,9 +3,13 @@ import 'package:get/get.dart';
 import 'package:quran_pro/core/theme/app_colors.dart';
 import 'package:quran_pro/features/home/viewmodels/home_view_model.dart';
 
-/// Floating frosted pill navigation. Only Home and Prayer exist so far.
+enum NavTab { home, learn, quran, prayer, more }
+
+/// Floating frosted pill navigation, shared by every tab.
 final class HomeBottomNav extends GetView<HomeViewModel> {
-  const HomeBottomNav({super.key});
+  const HomeBottomNav({this.current = NavTab.home, super.key});
+
+  final NavTab current;
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -37,24 +41,37 @@ final class HomeBottomNav extends GetView<HomeViewModel> {
         ),
         child: Row(
           children: [
-            _NavItem(icon: Icons.mosque, labelKey: 'nav_home', active: true, onTap: () {}),
             _NavItem(
-              icon: Icons.auto_stories_outlined,
+              icon: Icons.mosque,
+              labelKey: 'nav_home',
+              active: current == NavTab.home,
+              onTap: current == NavTab.home ? () {} : () => controller.openHome(),
+            ),
+            _NavItem(
+              icon: current == NavTab.learn ? Icons.auto_stories : Icons.auto_stories_outlined,
               labelKey: 'nav_learn',
-              dot: true,
-              onTap: controller.comingSoon,
+              active: current == NavTab.learn,
+              dot: current != NavTab.learn,
+              onTap: current == NavTab.learn ? () {} : () => controller.openLearn(),
             ),
             _NavItem(
-              icon: Icons.menu_book_outlined,
+              icon: current == NavTab.quran ? Icons.menu_book : Icons.menu_book_outlined,
               labelKey: 'nav_quran',
-              onTap: controller.comingSoon,
+              active: current == NavTab.quran,
+              onTap: current == NavTab.quran ? () {} : () => controller.openQuran(),
             ),
             _NavItem(
-              icon: Icons.schedule,
+              icon: current == NavTab.prayer ? Icons.watch_later : Icons.schedule,
               labelKey: 'nav_prayer',
-              onTap: controller.openPrayerTimes,
+              active: current == NavTab.prayer,
+              onTap: current == NavTab.prayer ? () {} : () => controller.openPrayerTimes(),
             ),
-            _NavItem(icon: Icons.grid_view, labelKey: 'nav_more', onTap: controller.comingSoon),
+            _NavItem(
+              icon: current == NavTab.more ? Icons.grid_view_rounded : Icons.grid_view,
+              labelKey: 'nav_more',
+              active: current == NavTab.more,
+              onTap: current == NavTab.more ? () {} : () => controller.openMore(),
+            ),
           ],
         ),
       ),

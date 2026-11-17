@@ -12,7 +12,7 @@ final class App extends GetView<SettingsService> {
 
   @override
   Widget build(BuildContext context) => GetMaterialApp(
-    title: 'Quran Pro',
+    title: 'Noor Quran',
     debugShowCheckedModeBanner: false,
     theme: AppTheme.light,
     darkTheme: AppTheme.dark,

@@ -5,27 +5,63 @@ Every bundled recording, where it came from, and its license. Keep this file and
 
 ## Azan notification sounds
 
-Both are short excerpts (under 30 s, the iOS limit for notification sounds) of field recordings
-published on Freesound. Changes made to both: trimmed, fades added, mixed down to mono,
-loudness-normalised to about -16 LUFS, re-encoded (MP3 for Android/in-app preview, IMA4 CAF for iOS).
+Short excerpts (under 30 s, the iOS limit for notification sounds) of full recordings. Processing:
+trimmed at the first natural pause, fades added, mixed down to mono, loudness-normalised to about
+-16 LUFS, re-encoded (MP3 96 kbps for Android and the in-app preview, IMA4 CAF for iOS).
 
-| App name | Files | Source | Author | License | Attribution required |
-|---|---|---|---|---|---|
-| Tatarstan Village (default) | `assets/audio/azan_tatarstan.mp3`, `android/app/src/main/res/raw/azan_tatarstan.mp3`, `ios/Runner/azan_tatarstan.caf` | [“morning_azan.wav”, Freesound #168775](https://freesound.org/people/Jahffar/sounds/168775/) — recorded in Bereske, Tatarstan, Aug 2012; excerpt 0.9 s–29.0 s | Jahffar | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/) | No (credited anyway) |
-| Hamtramck, Michigan | `assets/audio/azan_hamtramck.mp3`, `android/app/src/main/res/raw/azan_hamtramck.mp3`, `ios/Runner/azan_hamtramck.caf` | [“Islamic Call to Prayer (Dhuhr Adhan Audiophile Field Recording from Hamtramck, MI 96 kHz 24 Bit Stereo).wav”, Freesound #255231](https://freesound.org/people/RJStefanski/sounds/255231/); excerpt 10.8 s–37.0 s | RJStefanski | [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/) | **Yes** — shown in the app's Sound credits sheet |
+| App name | Files | Source | License |
+|---|---|---|---|
+| Makkah · Masjid al-Haram (default) | `assets/audio/azan_makkah.mp3`, `android/app/src/main/res/raw/azan_makkah.mp3`, `ios/Runner/azan_makkah.caf` | Full recording supplied by the project owner (`tool/audio_src/azanmakkah.mp3`, 215 s); excerpt 0.45 s–23.7 s (the opening takbir) | **Not stated** |
+| Madinah · Masjid an-Nabawi | `assets/audio/azan_madinah.mp3`, `android/app/src/main/res/raw/azan_madinah.mp3`, `ios/Runner/azan_madinah.caf` | Full recording supplied by the project owner (`tool/audio_src/azanmadina.mp3`, 231 s); excerpt 0.55 s–22.3 s | **Not stated** |
 
-Licenses were read from each Freesound sound page (the license link in the page HTML) on 2026-11-12.
-The source files were Freesound's public HQ previews of those sounds.
+**Before any public release:** confirm who recorded these and that the app may redistribute them
+(Haramain broadcast recordings are usually copyrighted by the broadcaster), then fill in the
+license column and the in-app credit (`AzanSound.credit`).
 
-### Considered and rejected
-
-- Freesound #648427 (CC0, Mashhad) — too faint (-49 LUFS), the call is barely audible.
-- Freesound #260102 (CC BY 3.0, Mt. Merapi) — the call is buried in ambience, no clear phrases.
-- Freesound #161185 (CC BY 4.0, Istanbul) — several overlapping calls in city noise.
-- Freesound #89738 (CC BY-NC 4.0, Mardin) — non-commercial license, not allowed in the app.
-- University of Cambridge Cairo adhan recordings — CC BY-NC-ND, not allowed.
+Removed on 2026-11-16 at the owner's request: "Tatarstan Village" (Freesound #168775, CC0) and
+"Hamtramck, Michigan" (Freesound #255231, CC BY 3.0). Saved choices of either fall back to Makkah,
+and their Android notification channels are deleted on startup.
 
 ## Quran recitation (streamed, not bundled)
 
 Ayah audio streams from EveryAyah (`https://everyayah.com/data/Alafasy_128kbps/`, Mishary Rashid
 Alafasy). It is not bundled; EveryAyah's usage terms still need a review before release.
+
+## Arabic letter names (Learn → Noorani Qaida)
+
+`assets/audio/letters/letter_01.mp3` … `letter_28.mp3`, alif to yaa in alphabet order.
+
+- Source: Al-Bustan Seeds "Learn the Arabic letters" game,
+  https://projects.albustanseeds.org/game/letters_sound/ (files `<id>s.mp3`).
+- Licence: **none stated.** Bundled in the app at the owner's request.
+- **Before any public release:** replace with recordings you have the right to distribute
+  (or written permission from Al-Bustan Seeds). Without the files the letters stay silent;
+  nothing else breaks.
+
+## Kalima, dua and salah recitations (Learn lessons)
+
+`assets/audio/phrases/*.mp3`, one clip per Arabic card in `assets/data/learn_curriculum.json`
+(the card's `audio` field). Quiz questions quoting part of a card play that card's clip.
+
+- Kalimas 1 and 3–6: the opening Arabic recitation cut from nooresunnat.com's kalima MP3s
+  (the full files go on to English/Urdu translation).
+- Everything else (spoken chapter title and "yaqool" trimmed off): Hisnul Muslim recordings from hisnmuslim.com (`/audio/ar/<id>.mp3`):
+  2nd Kalima/after wudu 13, Bismillah 12, tawwabin 14, takbir 241, thana 28, ruku 33,
+  sami'allah 38 + first phrase of 39, sujood 41, tashahhud 52, durood 53, sleep 105, waking 1,
+  after eating 180, leaving home 16, entering masjid (last phrase of 20), leaving masjid
+  (middle phrase of 21); Ramadan tracker: iftar 176, iftar as a guest 184, "inni sa'im" 186.
+- No recording yet: the closing salam and "Bismillahi awwalahu wa akhirahu".
+- Licence: **none stated** by either site. Committed and bundled in the app at the owner's request.
+- **Before any public release:** replace or get permission. Missing files only make cards silent.
+
+## Quran text and translations (Quran tab → reader)
+
+`assets/quran/NNN.json`, one file per surah, built from api.alquran.cloud editions:
+
+- Arabic: `quran-uthmani` (Tanzil Uthmani text). Tanzil allows verbatim redistribution with
+  attribution; the text must not be altered. The only change is that the Bismillah is taken off
+  the front of ayah 1 (surahs 2–114 except 9) so the reader shows it once above the surah.
+- English: `en.sahih` (Saheeh International). Translation copyright stays with the publisher;
+  check terms before a public release.
+- Urdu: `ur.jalandhry` (Fateh Muhammad Jalandhry).
+- Surah/juz index (`assets/data/quran_index.json`): api.alquran.cloud metadata.

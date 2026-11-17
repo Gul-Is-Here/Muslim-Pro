@@ -161,7 +161,7 @@ final class _ProfileChip extends GetView<HomeViewModel> {
       shadowColor: Colors.black12,
       child: InkWell(
         customBorder: const StadiumBorder(),
-        onTap: controller.comingSoon,
+        onTap: controller.openMore, // account, settings and tools
         child: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(6, 4, 10, 4),
           child: Row(
@@ -192,12 +192,14 @@ final class _ProfileChip extends GetView<HomeViewModel> {
                       ),
               ),
               const Icon(Icons.local_fire_department, size: 16, color: AppColors.amber600),
-              Text(
-                '${controller.streakDays}',
-                style: const TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.amber700,
+              Obx(
+                () => Text(
+                  '${controller.streakDays}',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.amber700,
+                  ),
                 ),
               ),
             ],

@@ -16,6 +16,7 @@ abstract final class ErrorMapper {
     'permission-denied': 'err_permission',
     'not-found': 'err_not_found',
     'google-sign-in-failed': 'err_google_failed',
+    'google-not-configured': 'err_google_setup',
     'invalid-location': 'err_invalid_location',
   };
 

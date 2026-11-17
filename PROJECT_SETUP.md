@@ -372,7 +372,7 @@ flutter { source = "../.." }
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools"
-    tools:keep="@drawable/ic_notification,@raw/azan_tatarstan,@raw/azan_hamtramck" />
+    tools:keep="@drawable/ic_notification,@raw/azan_makkah,@raw/azan_madinah" />
 ```
 
 Azan clips live in `res/raw/azan_<name>.mp3` (one notification channel per sound; sources and licenses in `docs/AUDIO_CREDITS.md`). `ic_notification` is a white, monochrome vector in `res/drawable/`.

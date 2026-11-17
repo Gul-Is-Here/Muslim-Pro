@@ -117,7 +117,11 @@ final class QiblaModeSwitcher extends GetView<QiblaViewModel> {
               : scheme.surfaceContainerLowest,
           selectedForegroundColor: onImage ? Colors.white : AppColors.primaryContainer,
           side: BorderSide.none,
-          textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+          textStyle: const TextStyle(
+            fontFamily: 'Manrope',
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+          ),
         ),
         segments: [
           ButtonSegment(

@@ -7,10 +7,11 @@ import 'package:quran_pro/core/services/settings_service.dart';
 final class AuthMiddleware extends GetMiddleware {
   @override
   RouteSettings? redirect(String? route) {
+    // Sign in (or continue as guest) first; the permission walkthrough follows, once per device.
+    if (!Get.find<AuthService>().isSignedIn) return const RouteSettings(name: AppRoutes.auth);
     if (!Get.find<SettingsService>().onboardingDone) {
       return const RouteSettings(name: AppRoutes.onboarding);
     }
-    if (!Get.find<AuthService>().isSignedIn) return const RouteSettings(name: AppRoutes.auth);
     return null;
   }
 }

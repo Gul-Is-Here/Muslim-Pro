@@ -164,7 +164,11 @@ final class FinishButton extends GetView<TasbeehViewModel> {
         style: FilledButton.styleFrom(
           backgroundColor: logged ? AppColors.emerald800 : AppColors.primaryContainer,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+          textStyle: const TextStyle(
+            fontFamily: 'Manrope',
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+          ),
         ),
         onPressed: logged || controller.state.session == 0 ? null : controller.finishSession,
         icon: Icon(logged ? Icons.check_circle : Icons.save, size: 20),

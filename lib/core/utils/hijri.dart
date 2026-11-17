@@ -16,4 +16,19 @@ abstract final class Hijri {
     final month = (24 * l) ~/ 709;
     return (year: 30 * n + j - 30, month: month, day: l - (709 * month) ~/ 24);
   }
+
+  /// Gregorian date of a tabular Hijri date (inverse of [fromGregorian]).
+  static DateTime toGregorian(int year, int month, int day) {
+    final jd =
+        day + (29.5 * (month - 1)).ceil() + (year - 1) * 354 + (3 + 11 * year) ~/ 30 + 1948439;
+    final g = DateTime.utc(1970).add(Duration(days: jd - 2440588));
+    return DateTime(g.year, g.month, g.day);
+  }
+
+  /// Days in a tabular Hijri month: odd months 30, even 29, Dhu al-Hijjah 30 in leap years.
+  static int monthLength(int year, int month) => toGregorian(
+    month == 12 ? year + 1 : year,
+    month == 12 ? 1 : month + 1,
+    1,
+  ).difference(toGregorian(year, month, 1)).inDays;
 }

@@ -58,16 +58,16 @@ android {
         create("dev") {
             dimension = "env"
             applicationIdSuffix = ".dev"
-            resValue("string", "app_name", "Quran Pro Dev")
+            resValue("string", "app_name", "Noor Quran")
         }
         create("staging") {
             dimension = "env"
             applicationIdSuffix = ".stg"
-            resValue("string", "app_name", "Quran Pro Stg")
+            resValue("string", "app_name", "Noor Stg")
         }
         create("prod") {
             dimension = "env"
-            resValue("string", "app_name", "Quran Pro")
+            resValue("string", "app_name", "Noor Quran")
         }
     }
 

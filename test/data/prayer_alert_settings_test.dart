@@ -16,24 +16,26 @@ void main() {
   test('round-trips through JSON (as persisted)', () {
     final s = const PrayerAlertSettings()
         .withEnabled(Prayer.asr, on: false)
-        .withSound(Prayer.fajr, AzanSound.hamtramck)
+        .withSound(Prayer.fajr, AzanSound.madinah)
         .withSound(Prayer.isha, AzanSound.system);
     final back = PrayerAlertSettings.fromJson(s.toJson());
     expect(back, s);
     expect(back.isOn(Prayer.asr), isFalse);
-    expect(back.soundFor(Prayer.fajr), AzanSound.hamtramck);
+    expect(back.soundFor(Prayer.fajr), AzanSound.madinah);
     expect(back.soundFor(Prayer.dhuhr), AzanSound.fallback);
   });
 
   test('ignores unknown prayers, sounds and malformed values', () {
     final s = PrayerAlertSettings.fromJson(const {
       'enabled': {'fajr': false, 'tahajjud': false, 'dhuhr': 'yes'},
-      'sounds': {'asr': 'removed_sound', 'isha': 'hamtramck', 'nope': 'tatarstan'},
+      // tatarstan/hamtramck were bundled sounds until 2026-11-16: old choices fall back.
+      'sounds': {'asr': 'tatarstan', 'maghrib': 'hamtramck', 'isha': 'madinah', 'nope': 'makkah'},
     });
     expect(s.isOn(Prayer.fajr), isFalse);
     expect(s.isOn(Prayer.dhuhr), isTrue);
     expect(s.soundFor(Prayer.asr), AzanSound.fallback);
-    expect(s.soundFor(Prayer.isha), AzanSound.hamtramck);
+    expect(s.soundFor(Prayer.maghrib), AzanSound.fallback);
+    expect(s.soundFor(Prayer.isha), AzanSound.madinah);
   });
 
   test('every bundled sound ships for preview, Android and iOS, and survives shrinking', () {

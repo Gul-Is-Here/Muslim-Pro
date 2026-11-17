@@ -26,15 +26,17 @@ final class AuthRemoteDataSource {
   });
 
   /// A guest is upgraded in place (same uid, progress kept); otherwise a new account is created.
-  Future<AppUser> signUpWithEmail(String email, String password) => guard(() async {
+  Future<AppUser> signUpWithEmail(String email, String password, {String? name}) => guard(() async {
     final guest = _currentGuest;
     final cred = guest != null
         ? await guest.linkWithCredential(
             EmailAuthProvider.credential(email: email, password: password),
           )
         : await _auth.createUserWithEmailAndPassword(email: email, password: password);
-    await cred.user!.sendEmailVerification();
-    return _toModel(cred.user!);
+    final user = cred.user!;
+    if (name != null && name.isNotEmpty) await user.updateDisplayName(name); // userChanges re-emits
+    await user.sendEmailVerification();
+    return _toModel(_auth.currentUser ?? user);
   });
 
   Future<AppUser> signInWithGoogle() => guard(() async {

@@ -20,8 +20,8 @@ final class AuthRepositoryImpl implements AuthRepository {
       runCatching(() => _remote.signInWithEmail(email, password));
 
   @override
-  Future<Result<AppUser>> signUpWithEmail(String email, String password) =>
-      runCatching(() => _remote.signUpWithEmail(email, password));
+  Future<Result<AppUser>> signUpWithEmail(String email, String password, {String? name}) =>
+      runCatching(() => _remote.signUpWithEmail(email, password, name: name));
 
   @override
   Future<Result<AppUser>> signInWithGoogle() => runCatching(_remote.signInWithGoogle);

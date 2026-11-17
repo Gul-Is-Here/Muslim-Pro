@@ -288,7 +288,11 @@ final class _TargetSelector extends GetView<TasbeehViewModel> {
           selectedBackgroundColor: scheme.surfaceContainerLowest,
           selectedForegroundColor: AppColors.primary,
           side: BorderSide.none,
-          textStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
+          textStyle: const TextStyle(
+            fontFamily: 'Manrope',
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+          ),
         ),
         segments: [
           for (final t in TasbeehState.targets)

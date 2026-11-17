@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:quran_pro/app/app.dart';
 import 'package:quran_pro/app/bindings/initial_binding.dart';
 import 'package:quran_pro/app/session/session_controller.dart';
@@ -36,8 +38,17 @@ Future<void> bootstrap(Flavor flavor) async {
     GetStorage.init(),
     GetStorage.init(SessionController.userCacheBox),
     initializeDateFormatting(),
+    // Before the app-wide AudioPlayer exists: recitation gets notification-bar and lock-screen
+    // controls and keeps playing with the screen off.
+    JustAudioBackground.init(
+      androidNotificationChannelId: 'com.islamicnoorapp.app.playback',
+      androidNotificationChannelName: 'Recitation playback',
+      androidNotificationIcon: 'drawable/ic_notification',
+      androidNotificationOngoing: true,
+    ),
   ]);
-  InitialBinding().dependencies();
+  // Not user-visible and not backed up as documents; kept until the user deletes downloads.
+  InitialBinding(appSupportDir: await getApplicationSupportDirectory()).dependencies();
   await Get.find<AuthService>().ready; // restored session known before the first route
   runApp(const App());
 }

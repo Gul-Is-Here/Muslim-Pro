@@ -75,3 +75,7 @@ functions/lib/
 
 # Android Gradle build output
 android/build/
+
+
+# Full-length source recordings (licence unconfirmed; the app ships trimmed clips)
+tool/audio_src/

@@ -6,7 +6,17 @@ final class HomeBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(
-      () => HomeViewModel(Get.find(), Get.find(), Get.find(), Get.find(), Get.find()),
+      () => HomeViewModel(
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+        Get.find(),
+      ),
       fenix: true,
     );
     PrayerTimesBinding()
